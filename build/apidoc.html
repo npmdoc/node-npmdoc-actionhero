@@ -1,0 +1,3844 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://www.actionherojs.com"
+
+    >actionhero (v16.0.5)</a>
+</h1>
+<h4>actionhero.js is a multi-transport API Server with integrated cluster capabilities and delayed tasks</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero">module actionhero</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.actionhero">
+            function <span class="apidocSignatureSpan"></span>actionhero
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.toString">
+            function <span class="apidocSignatureSpan">actionhero.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>actionProcessor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>actions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>chatRoom</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>connections</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>documentation</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>exceptions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>genericServer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>id</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>params</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>pids</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>resque</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>servers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>socket</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>specHelper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>staticFile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>web</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>websocket</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.actionProcessor">module actionhero.actionProcessor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.actionProcessor.initialize">
+            function <span class="apidocSignatureSpan">actionhero.actionProcessor.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.actionProcessor.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.actions">module actionhero.actions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.actions.initialize">
+            function <span class="apidocSignatureSpan">actionhero.actions.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.actions.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.cache">module actionhero.cache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.cache.initialize">
+            function <span class="apidocSignatureSpan">actionhero.cache.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.cache.</span>loadPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.cache.</span>startPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.chatRoom">module actionhero.chatRoom</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.chatRoom.initialize">
+            function <span class="apidocSignatureSpan">actionhero.chatRoom.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.chatRoom.start">
+            function <span class="apidocSignatureSpan">actionhero.chatRoom.</span>start
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.chatRoom.</span>loadPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.chatRoom.</span>startPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.config">module actionhero.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.config.initialize">
+            function <span class="apidocSignatureSpan">actionhero.config.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.config.start">
+            function <span class="apidocSignatureSpan">actionhero.config.</span>start
+            <span class="apidocSignatureSpan">(api, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.config.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.connections">module actionhero.connections</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.connections.initialize">
+            function <span class="apidocSignatureSpan">actionhero.connections.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.connections.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.documentation">module actionhero.documentation</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.documentation.initialize">
+            function <span class="apidocSignatureSpan">actionhero.documentation.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.documentation.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.exceptions">module actionhero.exceptions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.exceptions.initialize">
+            function <span class="apidocSignatureSpan">actionhero.exceptions.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.exceptions.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.genericServer">module actionhero.genericServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.genericServer.initialize">
+            function <span class="apidocSignatureSpan">actionhero.genericServer.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.genericServer.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.id">module actionhero.id</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.id.initialize">
+            function <span class="apidocSignatureSpan">actionhero.id.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.id.start">
+            function <span class="apidocSignatureSpan">actionhero.id.</span>start
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.id.</span>loadPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.id.</span>startPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.params">module actionhero.params</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.params.initialize">
+            function <span class="apidocSignatureSpan">actionhero.params.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.params.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.pids">module actionhero.pids</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.pids.initialize">
+            function <span class="apidocSignatureSpan">actionhero.pids.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.pids.start">
+            function <span class="apidocSignatureSpan">actionhero.pids.</span>start
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.pids.</span>loadPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.pids.</span>startPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.resque">module actionhero.resque</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.resque.initialize">
+            function <span class="apidocSignatureSpan">actionhero.resque.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.resque.start">
+            function <span class="apidocSignatureSpan">actionhero.resque.</span>start
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.resque.stop">
+            function <span class="apidocSignatureSpan">actionhero.resque.</span>stop
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.resque.</span>loadPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.resque.</span>startPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.resque.</span>stopPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.servers">module actionhero.servers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.servers.initialize">
+            function <span class="apidocSignatureSpan">actionhero.servers.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.servers.start">
+            function <span class="apidocSignatureSpan">actionhero.servers.</span>start
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.servers.stop">
+            function <span class="apidocSignatureSpan">actionhero.servers.</span>stop
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.servers.</span>loadPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.servers.</span>startPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.servers.</span>stopPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.socket">module actionhero.socket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.socket.initialize">
+            function <span class="apidocSignatureSpan">actionhero.socket.</span>initialize
+            <span class="apidocSignatureSpan">(api, options, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.specHelper">module actionhero.specHelper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.specHelper.initialize">
+            function <span class="apidocSignatureSpan">actionhero.specHelper.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.specHelper.start">
+            function <span class="apidocSignatureSpan">actionhero.specHelper.</span>start
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.specHelper.</span>loadPriority</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.specHelper.</span>startPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.staticFile">module actionhero.staticFile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.staticFile.initialize">
+            function <span class="apidocSignatureSpan">actionhero.staticFile.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.staticFile.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.utils">module actionhero.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.utils.initialize">
+            function <span class="apidocSignatureSpan">actionhero.utils.</span>initialize
+            <span class="apidocSignatureSpan">(api, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.utils.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.web">module actionhero.web</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.web.initialize">
+            function <span class="apidocSignatureSpan">actionhero.web.</span>initialize
+            <span class="apidocSignatureSpan">(api, options, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.websocket">module actionhero.websocket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.websocket.initialize">
+            function <span class="apidocSignatureSpan">actionhero.websocket.</span>initialize
+            <span class="apidocSignatureSpan">(api, options, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero" id="apidoc.module.actionhero">module actionhero</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.actionhero" id="apidoc.element.actionhero.actionhero">
+        function <span class="apidocSignatureSpan"></span>actionhero
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">actionhero = function () {
+  this.initializers = {}
+  this.api = {
+    running: false,
+    initialized: false,
+    shuttingDown: false
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.toString" id="apidoc.element.actionhero.toString">
+        function <span class="apidocSignatureSpan">actionhero.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (error &#x26;&#x26; typeof error === &#x27;string&#x27;) {
+  error = new Error(error)
+}
+
+if (error &#x26;&#x26; !this.response.error) {
+  if (typeof this.response === &#x27;string&#x27; || Array.isArray(this.response)) {
+    this.response = error.<span class="apidocCodeKeywordSpan">toString</span>()
+  } else {
+    this.response.error = error
+  }
+}
+
+this.incrementPendingActions(-1)
+this.duration = new Date().getTime() - this.actionStartTime
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.actionProcessor" id="apidoc.module.actionhero.actionProcessor">module actionhero.actionProcessor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.actionProcessor.initialize" id="apidoc.element.actionhero.actionProcessor.initialize">
+        function <span class="apidocSignatureSpan">actionhero.actionProcessor.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  const prepareStringMethod = function (method) {
+    const cmdParts = method.split(&#x27;.&#x27;)
+    const cmd = cmdParts.shift()
+    if (cmd !== &#x27;api&#x27;) { throw new Error(&#x27;cannot operate on a method outside of the api object&#x27;) }
+    return api.utils.stringToHash(cmdParts.join(&#x27;.&#x27;))
+  }
+
+  api.ActionProcessor = function (connection, callback) {
+    if (!connection) {
+      throw new Error(&#x27;data.connection is required&#x27;)
+    }
+
+    this.connection = connection
+    this.action = null
+    this.toProcess = true
+    this.toRender = true
+    this.messageCount = connection.messageCount
+    this.params = connection.params
+    this.callback = callback
+    this.missingParams = []
+    this.validatorErrors = []
+    this.actionStartTime = null
+    this.actionTemplate = null
+    this.working = false
+    this.response = {}
+    this.duration = null
+    this.actionStatus = null
+  }
+
+  api.ActionProcessor.prototype.incrementTotalActions = function (count) {
+    if (!count) { count = 1 }
+    this.connection.totalActions = this.connection.totalActions + count
+  }
+
+  api.ActionProcessor.prototype.incrementPendingActions = function (count) {
+    if (!count) { count = 1 }
+    this.connection.pendingActions = this.connection.pendingActions + count
+  }
+
+  api.ActionProcessor.prototype.getPendingActionCount = function () {
+    return this.connection.pendingActions
+  }
+
+  api.ActionProcessor.prototype.completeAction = function (status) {
+    let error = null
+    this.actionStatus = String(status)
+
+    if (status instanceof Error) {
+      error = status
+    } else if (status === &#x27;server_shutting_down&#x27;) {
+      error = api.config.errors.serverShuttingDown(this)
+    } else if (status === &#x27;too_many_requests&#x27;) {
+      error = api.config.errors.tooManyPendingActions(this)
+    } else if (status === &#x27;unknown_action&#x27;) {
+      error = api.config.errors.unknownAction(this)
+    } else if (status === &#x27;unsupported_server_type&#x27;) {
+      error = api.config.errors.unsupportedServerType(this)
+    } else if (status === &#x27;missing_params&#x27;) {
+      error = api.config.errors.missingParams(this, this.missingParams)
+    } else if (status === &#x27;validator_errors&#x27;) {
+      error = api.config.errors.invalidParams(this, this.validatorErrors)
+    } else if (status) {
+      error = status
+    }
+
+    if (error &#x26;&#x26; typeof error === &#x27;string&#x27;) {
+      error = new Error(error)
+    }
+
+    if (error &#x26;&#x26; !this.response.error) {
+      if (typeof this.response === &#x27;string&#x27; || Array.isArray(this.response)) {
+        this.response = error.toString()
+      } else {
+        this.response.error = error
+      }
+    }
+
+    this.incrementPendingActions(-1)
+    this.duration = new Date().getTime() - this.actionStartTime
+
+    process.nextTick(() =&#x3e; {
+      if (typeof this.callback === &#x27;function&#x27;) {
+        this.callback(this)
+      }
+    })
+
+    this.working = false
+    this.logAction(error)
+  }
+
+  api.ActionProcessor.prototype.logAction = function (error) {
+    // logging
+    let logLevel = &#x27;info&#x27;
+    if (this.actionTemplate &#x26;&#x26; this.actionTemplate.logLevel) {
+      logLevel = this.actionTemplate.logLevel
+    }
+
+    let filteredParams = {}
+    for (let i in this.params) {
+      if (api.config.general.filteredParams &#x26;&#x26; api.config.general.filteredParams.indexOf(i) &#x3e;= 0) {
+        filteredParams[i] = &#x27;[FILTERED]&#x27;
+      } else if (typeof this.params[i] === &#x27;string&#x27;) {
+        filteredParams[i] = this.params[i].substring(0, api.config.logger.maxLogStringLength)
+      } else {
+        filteredParams[i] = this.params[i]
+      }
+    }
+
+    const logLine = {
+      to: this.connection.remoteIP,
+      action: this.action,
+      params: JSON.stringify(filteredParams),
+      duration: this.duration
+    }
+
+    if (error) {
+      if (error instanceof Error) {
+        logLine.error = String(error)
+      } else {
+        try {
+          logLine.error = JSON.stringify(error)
+        } catch (e) {
+          logLine.error = String(error)
+        }
+      }
+    }
+
+    api.log([&#x27;[ action @ %s ]&#x27;, this.connection.type], logLevel, logLine)
+  }
+
+  api.ActionProcessor.prototype.preProcessAction = function (callback) ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.actions" id="apidoc.module.actionhero.actions">module actionhero.actions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.actions.initialize" id="apidoc.element.actionhero.actions.initialize">
+        function <span class="apidocSignatureSpan">actionhero.actions.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.actions = {}
+  api.actions.actions = {}
+  api.actions.versions = {}
+
+  api.actions.middleware = {}
+  api.actions.globalMiddleware = []
+
+  api.actions.addMiddleware = function (data) {
+    if (!data.name) { throw new Error(&#x27;middleware.name is required&#x27;) }
+    if (!data.priority) { data.priority = api.config.general.defaultMiddlewarePriority }
+    data.priority = Number(data.priority)
+    api.actions.middleware[data.name] = data
+    if (data.global === true) {
+      api.actions.globalMiddleware.push(data.name)
+      api.utils.sortGlobalMiddleware(api.actions.globalMiddleware, api.actions.middleware)
+    }
+  }
+
+  api.actions.validateAction = function (action) {
+    const fail = (msg) =&#x3e; {
+      return next(new Error(msg))
+    }
+
+    if (action.inputs === undefined) {
+      action.inputs = {}
+    }
+
+    if (typeof action.name !== &#x27;string&#x27; || action.name.length &#x3c; 1) {
+      fail(&#x27;an action is missing \&#x27;action.name\&#x27;&#x27;)
+      return false
+    } else if (typeof action.description !== &#x27;string&#x27; || action.description.length &#x3c; 1) {
+      fail(&#x27;Action &#x27; + action.name + &#x27; is missing \&#x27;action.description\&#x27;&#x27;)
+      return false
+    } else if (typeof action.run !== &#x27;function&#x27;) {
+      fail(&#x27;Action &#x27; + action.name + &#x27; has no run method&#x27;)
+      return false
+    } else if (api.connections !== null &#x26;&#x26; api.connections.allowedVerbs.indexOf(action.name) &#x3e;= 0) {
+      fail(action.name + &#x27; is a reserved verb for connections. choose a new name&#x27;)
+      return false
+    } else {
+      return true
+    }
+  }
+
+  api.actions.loadFile = function (fullFilePath, reload) {
+    if (reload === null) { reload = false }
+
+    const loadMessage = (action) =&#x3e; {
+      if (reload) {
+        api.log([&#x27;action reloaded: %s @ v%s, %s&#x27;, action.name, action.version, fullFilePath], &#x27;debug&#x27;)
+      } else {
+        api.log([&#x27;action loaded: %s @ v%s, %s&#x27;, action.name, action.version, fullFilePath], &#x27;debug&#x27;)
+      }
+    }
+
+    api.watchFileAndAct(fullFilePath, function () {
+      api.actions.loadFile(fullFilePath, true)
+      api.params.buildPostVariables()
+      api.routes.loadRoutes()
+    })
+
+    let action
+
+    try {
+      const collection = require(fullFilePath)
+      for (let i in collection) {
+        action = collection[i]
+        if (action.version === null || action.version === undefined) { action.version = 1.0 }
+        if (api.actions.actions[action.name] === null || api.actions.actions[action.name] === undefined) {
+          api.actions.actions[action.name] = {}
+        }
+        api.actions.actions[action.name][action.version] = action
+        if (api.actions.versions[action.name] === null || api.actions.versions[action.name] === undefined) {
+          api.actions.versions[action.name] = []
+        }
+        api.actions.versions[action.name].push(action.version)
+        api.actions.versions[action.name].sort()
+        api.actions.validateAction(api.actions.actions[action.name][action.version])
+        loadMessage(action)
+      }
+    } catch (error) {
+      try {
+        api.exceptionHandlers.loader(fullFilePath, error)
+        delete api.actions.actions[action.name][action.version]
+      } catch (err2) {
+        throw error
+      }
+    }
+  }
+
+  api.config.general.paths.action.forEach(function (p) {
+    api.utils.recursiveDirectoryGlob(p).forEach(function (f) {
+      api.actions.loadFile(f)
+    })
+  })
+
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.cache" id="apidoc.module.actionhero.cache">module actionhero.cache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.cache.initialize" id="apidoc.element.actionhero.cache.initialize">
+        function <span class="apidocSignatureSpan">actionhero.cache.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.cache = {}
+  api.cache.redisPrefix = api.config.general.cachePrefix
+  api.cache.lockPrefix = api.config.general.lockPrefix
+  api.cache.lockDuration = api.config.general.lockDuration
+  api.cache.lockName = api.id
+  api.cache.lockRetry = 100
+
+  const redis = api.redis.clients.client
+
+  api.cache.keys = function (callback) {
+    redis.keys(api.cache.redisPrefix + &#x27;*&#x27;, callback)
+  }
+
+  api.cache.locks = function (callback) {
+    redis.keys(api.cache.lockPrefix + &#x27;*&#x27;, callback)
+  }
+
+  api.cache.size = function (callback) {
+    api.cache.keys((error, keys) =&#x3e; {
+      let length = 0
+      if (keys) { length = keys.length }
+      callback(error, length)
+    })
+  }
+
+  api.cache.clear = function (callback) {
+    api.cache.keys((error, keys) =&#x3e; {
+      if (error &#x26;&#x26; typeof callback === &#x27;function&#x27;) { return callback(error) }
+      let jobs = []
+      keys.forEach((key) =&#x3e; {
+        jobs.push((done) =&#x3e; { redis.del(key, done) })
+      })
+
+      async.parallel(jobs, (error) =&#x3e; {
+        if (typeof callback === &#x27;function&#x27;) { return callback(error) }
+      })
+    })
+  }
+
+  api.cache.dumpWrite = function (file, callback) {
+    let data = {}
+    api.cache.keys((error, keys) =&#x3e; {
+      if (error &#x26;&#x26; typeof callback === &#x27;function&#x27;) { return callback(error) }
+      let jobs = []
+      keys.forEach((key) =&#x3e; {
+        jobs.push((done) =&#x3e; {
+          redis.get(key, (error, content) =&#x3e; {
+            if (error) { return done(error) }
+            data[key] = content
+            return done()
+          })
+        })
+      })
+
+      async.parallel(jobs, function (error) {
+        if (error) {
+          if (typeof callback === &#x27;function&#x27;) { return callback(error) }
+        } else {
+          fs.writeFileSync(file, JSON.stringify(data))
+          if (typeof callback === &#x27;function&#x27;) { return callback(null, keys.length) }
+        }
+      })
+    })
+  }
+
+  api.cache.dumpRead = function (file, callback) {
+    api.cache.clear((error) =&#x3e; {
+      if (error) {
+        if (typeof callback === &#x27;function&#x27;) { return callback(error) }
+      } else {
+        let jobs = []
+        let data
+        try {
+          data = JSON.parse(fs.readFileSync(file))
+        } catch (error) { return callback(error) }
+
+        Object.keys(data).forEach((key) =&#x3e; {
+          let content = data[key]
+          jobs.push(function (done) { api.cache.saveDumpedElement(key, content, done) })
+        })
+
+        async.series(jobs, (error) =&#x3e; {
+          if (typeof callback === &#x27;function&#x27;) { return callback(error, Object.keys(data).length) }
+        })
+      }
+    })
+  }
+
+  api.cache.saveDumpedElement = function (key, content, callback) {
+    let parsedContent
+    try {
+      parsedContent = JSON.parse(content)
+    } catch (error) { return callback(error) }
+
+    redis.set(key, content, (error) =&#x3e; {
+      if (error) { return callback(error) } else if (parsedContent.expireTimestamp) {
+        const expireTimeSeconds = Math.ceil((parsedContent.expireTimestamp - new Date().getTime()) / 1000)
+        redis.expire(key, expireTimeSeconds, () =&#x3e; {
+          return callback(error)
+        })
+      } else {
+        return callback()
+      }
+    })
+  }
+
+  api.cache.load = function (key, options, callback) {
+    // optons: options.expireTimeMS, options.retry
+    if (typeof options === &#x27;function&#x27;) {
+      callback = options
+      options = {}
+    }
+
+    redis.get(api.cache.redisPrefix + key, function (error, cacheObj) {
+      if (error) { api.log(error, &#x27;error&#x27;) }
+      try { cacheObj = JSON.parse(cacheObj) } catch (e) {}
+      if (!cacheObj) {
+        if (typeof callback === &#x27;function&#x27;) {
+          return callback(new Error(api.i18n.localize(&#x27;Object not found&#x27;)), null, null, null, null)
+        }
+      } else if (cacheObj.expireTimestamp &#x3e;= new Date().getTime() || cacheObj.expireTimestamp === null) {
+        const lastReadAt = cacheObj.readAt
+        let expireTimeSeconds
+        cacheObj.readAt = new Date().getTime()
+        if (cacheObj.expireTimestamp) {
+          if (options.expireTimeMS) {
+            cacheObj.expireTimestamp = new Date().getTime() + options.expireTimeMS ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.chatRoom" id="apidoc.module.actionhero.chatRoom">module actionhero.chatRoom</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.chatRoom.initialize" id="apidoc.element.actionhero.chatRoom.initialize">
+        function <span class="apidocSignatureSpan">actionhero.chatRoom.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.chatRoom = {}
+  api.chatRoom.keys = {
+    rooms: &#x27;actionhero:chatRoom:rooms&#x27;,
+    members: &#x27;actionhero:chatRoom:members:&#x27;
+  }
+  api.chatRoom.messageChannel = &#x27;/actionhero/chat/chat&#x27;
+
+  api.chatRoom.middleware = {}
+  api.chatRoom.globalMiddleware = []
+
+  api.chatRoom.addMiddleware = function (data) {
+    if (!data.name) { throw new Error(&#x27;middleware.name is required&#x27;) }
+    if (!data.priority) { data.priority = api.config.general.defaultMiddlewarePriority }
+    data.priority = Number(data.priority)
+    api.chatRoom.middleware[data.name] = data
+
+    api.chatRoom.globalMiddleware.push(data.name)
+    api.chatRoom.globalMiddleware.sort((a, b) =&#x3e; {
+      if (api.chatRoom.middleware[a].priority &#x3e; api.chatRoom.middleware[b].priority) {
+        return 1
+      } else {
+        return -1
+      }
+    })
+  }
+
+  api.chatRoom.broadcast = function (connection, room, message, callback) {
+    if (!room || room.length === 0 || message === null || message.length === 0) {
+      if (typeof callback === &#x27;function&#x27;) { process.nextTick(() =&#x3e; { callback(api.config.errors.connectionRoomAndMessage(connection
+)) }) }
+    } else if (connection.rooms === undefined || connection.rooms.indexOf(room) &#x3e; -1) {
+      if (connection.id === undefined) { connection.id = 0 }
+      const payload = {
+        messageType: &#x27;chat&#x27;,
+        serverToken: api.config.general.serverToken,
+        serverId: api.id,
+        message: message,
+        sentAt: new Date().getTime(),
+        connection: {
+          id: connection.id,
+          room: room
+        }
+      }
+      const messagePayload = api.chatRoom.generateMessagePayload(payload)
+
+      api.chatRoom.handleCallbacks(connection, messagePayload.room, &#x27;onSayReceive&#x27;, messagePayload, (error, newPayload) =&#x3e; {
+        if (error) {
+          if (typeof callback === &#x27;function&#x27;) { process.nextTick(() =&#x3e; { callback(error) }) }
+        } else {
+          const payloadToSend = {
+            messageType: &#x27;chat&#x27;,
+            serverToken: api.config.general.serverToken,
+            serverId: api.id,
+            message: newPayload.message,
+            sentAt: newPayload.sentAt,
+            connection: {
+              id: newPayload.from,
+              room: newPayload.room
+            }
+          }
+          api.redis.publish(payloadToSend)
+          if (typeof callback === &#x27;function&#x27;) { process.nextTick(() =&#x3e; { callback(null) }) }
+        }
+      })
+    } else {
+      if (typeof callback === &#x27;function&#x27;) { process.nextTick(() =&#x3e; { callback(api.config.errors.connectionNotInRoom(connection,
+room)) }) }
+    }
+  }
+
+  api.chatRoom.generateMessagePayload = function (message) {
+    return {
+      message: message.message,
+      room: message.connection.room,
+      from: message.connection.id,
+      context: &#x27;user&#x27;,
+      sentAt: message.sentAt
+    }
+  }
+
+  api.chatRoom.incomingMessage = function (message) {
+    const messagePayload = api.chatRoom.generateMessagePayload(message)
+    for (let i in api.connections.connections) {
+      api.chatRoom.incomingMessagePerConnection(api.connections.connections[i], messagePayload)
+    }
+  }
+
+  api.chatRoom.incomingMessagePerConnection = function (connection, messagePayload) {
+    if (connection.canChat === true) {
+      if (connection.rooms.indexOf(messagePayload.room) &#x3e; -1) {
+        api.chatRoom.handleCallbacks(connection, messagePayload.room, &#x27;say&#x27;, messagePayload, (error, newMessagePayload) =&#x3e; {
+          if (!error) { connection.sendMessage(newMessagePayload, &#x27;say&#x27;) }
+        })
+      }
+    }
+  }
+
+  api.chatRoom.list = function (callback) {
+    api.redis.clients.client.smembers(api.chatRoom.keys.rooms, (error, rooms) =&#x3e; {
+      if (typeof callback === &#x27;function&#x27;) { callback(error, rooms) }
+    })
+  }
+
+  api.chatRoom.add = function (room, callback) {
+    api.chatRoom.exists(room, function (error, found) {
+      if (error) { return callback(error) }
+      if (found === false) {
+        api.redis.clients.client.sadd(api.chatRoom.keys.rooms, room, (error, count) =&#x3e; {
+          if (typeof callback === &#x27;function&#x27;) { callback(error, count) }
+        })
+      } else { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.chatRoom.start" id="apidoc.element.actionhero.chatRoom.start">
+        function <span class="apidocSignatureSpan">actionhero.chatRoom.</span>start
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
+  api.redis.subscriptionHandlers.chat = (message) =&#x3e; {
+    if (api.chatRoom) {
+      api.chatRoom.incomingMessage(message)
+    }
+  }
+
+  if (api.config.general.startingChatRooms) {
+    for (let room in api.config.general.startingChatRooms) {
+      api.log([&#x27;ensuring the existence of the chatRoom: %s&#x27;, room])
+      api.chatRoom.add(room)
+    }
+  }
+
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.config" id="apidoc.module.actionhero.config">module actionhero.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.config.initialize" id="apidoc.element.actionhero.config.initialize">
+        function <span class="apidocSignatureSpan">actionhero.config.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  // api.env
+
+  if (api._startingParams &#x26;&#x26; api._startingParams.api) {
+    api.utils.hashMerge(api, api._startingParams.api)
+  }
+
+  api.env = &#x27;development&#x27;
+
+  if (argv.NODE_ENV) {
+    api.env = argv.NODE_ENV
+  } else if (process.env.NODE_ENV) {
+    api.env = process.env.NODE_ENV
+  }
+
+  // reloading in development mode
+
+  api.watchedFiles = []
+
+  api.watchFileAndAct = function (file, callback) {
+    file = path.normalize(file)
+
+    if (!fs.existsSync(file)) {
+      throw new Error(file + &#x27; does not exist, and cannot be watched&#x27;)
+    }
+
+    if (api.config.general.developmentMode === true &#x26;&#x26; api.watchedFiles.indexOf(file) &#x3c; 0) {
+      api.watchedFiles.push(file)
+      fs.watchFile(file, {interval: 1000}, (curr, prev) =&#x3e; {
+        if (
+          api.running === true &#x26;&#x26;
+          api.config.general.developmentMode === true &#x26;&#x26;
+          curr.mtime &#x3e; prev.mtime
+        ) {
+          process.nextTick(() =&#x3e; {
+            let cleanPath = file
+            if (process.platform === &#x27;win32&#x27;) { cleanPath = file.replace(/\//g, &#x27;\\&#x27;) }
+            delete require.cache[require.resolve(cleanPath)]
+            callback(file)
+          })
+        }
+      })
+    }
+  }
+
+  api.unWatchAllFiles = function () {
+    for (let i in api.watchedFiles) {
+      fs.unwatchFile(api.watchedFiles[i])
+    }
+    api.watchedFiles = []
+  }
+
+  // We support multiple configuration paths as follows:
+  //
+  // 1. Use the project &#x27;config&#x27; folder, if it exists.
+  // 2. &#x22;actionhero --config=PATH1 --config=PATH2 --config=PATH3,PATH4&#x22;
+  // 3. &#x22;ACTIONHERO_CONFIG=PATH1,PATH2 npm start&#x22;
+  //
+  // Note that if --config or ACTIONHERO_CONFIG are used, they _overwrite_ the use of the default &#x22;config&#x22; folder. If
+  // you wish to use both, you need to re-specify &#x22;config&#x22;, e.g. &#x22;--config=config,local-config&#x22;. Also, note that
+  // specifying multiple --config options on the command line does exactly the same thing as using one parameter with
+  // comma separators, however the environment variable method only supports the comma-delimited syntax.
+  let configPaths = []
+
+  function addConfigPath (pathToCheck, alreadySplit) {
+    if (typeof pathToCheck === &#x27;string&#x27;) {
+      if (!alreadySplit) {
+        addConfigPath(pathToCheck.split(&#x27;,&#x27;), true)
+      } else {
+        if (pathToCheck.charAt(0) !== &#x27;/&#x27;) {
+          pathToCheck = path.resolve(api.projectRoot, pathToCheck)
+        }
+        if (fs.existsSync(pathToCheck)) {
+          configPaths.push(pathToCheck)
+        }
+      }
+    } else if (Array.isArray(pathToCheck)) {
+      pathToCheck.map((entry) =&#x3e; { addConfigPath(entry, alreadySplit) })
+    }
+  }
+
+  [argv.config, process.env.ACTIONHERO_CONFIG].map((entry) =&#x3e; { addConfigPath(entry, false) })
+
+  if (configPaths.length &#x3c; 1) {
+    addConfigPath(&#x27;config&#x27;, false)
+  }
+
+  if (configPaths.length &#x3c; 1) {
+    return next(new Error(configPaths + &#x27;No config directory found in this project, specified with --config, or found in process
+.env.ACTIONHERO_CONFIG&#x27;))
+  }
+
+  const rebootCallback = (file) =&#x3e; {
+    api.log([&#x27;*** rebooting due to config change (%s) ***&#x27;, file], &#x27;info&#x27;)
+    delete require.cache[require.resolve(file)]
+    api.commands.restart()
+  }
+
+  api.loadConfigDirectory = function (configPath, watch) {
+    const configFiles = api.utils.recursiveDirectoryGlob(configPath)
+
+    let loadRetries = 0
+    let loadErrors = {}
+    for (let i = 0, limit = configFiles.length; (i &#x3c; limit); i++) {
+      const f = configFiles[i]
+      try {
+        // attempt configuration file load
+        let localConfig = require(f)
+        if (localConfig[&#x27;default&#x27;]) { api.config = api.utils.hashMerge(api.config, localConfig[&#x27;default&#x27;], api) }
+        if (localConfig[api.env]) { api.config = api.utils.hashMerge(api.config, localConfig[api.env], api) }
+        // configuration file load success: clear retries and
+        // errors since progress has been made
+        loadRetries = 0
+        loadErrors = {}
+      } catch (error) {
+        // error loading configuration, abort if all remaining
+        // configuration files have been tried and failed
+        // indicating inability to progres ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.config.start" id="apidoc.element.actionhero.config.start">
+        function <span class="apidocSignatureSpan">actionhero.config.</span>start
+        <span class="apidocSignatureSpan">(api, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (api, callback) {
+  api.log([&#x27;environment: %s&#x27;, api.env], &#x27;notice&#x27;)
+  callback()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.connections" id="apidoc.module.actionhero.connections">module actionhero.connections</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.connections.initialize" id="apidoc.element.actionhero.connections.initialize">
+        function <span class="apidocSignatureSpan">actionhero.connections.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.connections = {
+
+    middleware: {},
+    globalMiddleware: [],
+
+    allowedVerbs: [
+      &#x27;quit&#x27;,
+      &#x27;exit&#x27;,
+      &#x27;documentation&#x27;,
+      &#x27;paramAdd&#x27;,
+      &#x27;paramDelete&#x27;,
+      &#x27;paramView&#x27;,
+      &#x27;paramsView&#x27;,
+      &#x27;paramsDelete&#x27;,
+      &#x27;roomAdd&#x27;,
+      &#x27;roomLeave&#x27;,
+      &#x27;roomView&#x27;,
+      &#x27;detailsView&#x27;,
+      &#x27;say&#x27;
+    ],
+
+    connections: {},
+
+    apply: function (connectionId, method, args, callback) {
+      if (args === undefined &#x26;&#x26; callback === undefined &#x26;&#x26; typeof method === &#x27;function&#x27;) {
+        callback = method; args = null; method = null
+      }
+      api.redis.doCluster(&#x27;api.connections.applyCatch&#x27;, [connectionId, method, args], connectionId, callback)
+    },
+
+    applyCatch: function (connectionId, method, args, callback) {
+      const connection = api.connections.connections[connectionId]
+      if (method &#x26;&#x26; args) {
+        if (method === &#x27;sendMessage&#x27; || method === &#x27;sendFile&#x27;) {
+          connection[method](args)
+        } else {
+          connection[method].apply(connection, args)
+        }
+      }
+      if (typeof callback === &#x27;function&#x27;) {
+        process.nextTick(() =&#x3e; {
+          callback(cleanConnection(connection))
+        })
+      }
+    },
+
+    addMiddleware: function (data) {
+      if (!data.name) { throw new Error(&#x27;middleware.name is required&#x27;) }
+      if (!data.priority) { data.priority = api.config.general.defaultMiddlewarePriority }
+      data.priority = Number(data.priority)
+      api.connections.middleware[data.name] = data
+
+      this.globalMiddleware.push(data.name)
+      this.globalMiddleware.sort((a, b) =&#x3e; {
+        if (api.connections.middleware[a].priority &#x3e; api.connections.middleware[b].priority) {
+          return 1
+        } else {
+          return -1
+        }
+      })
+    }
+  }
+
+  const cleanConnection = function (connection) {
+    let clean = {}
+    for (let i in connection) {
+      if (i !== &#x27;rawConnection&#x27;) {
+        clean[i] = connection[i]
+      }
+    }
+    return clean
+  }
+
+  // {type: type, remotePort: remotePort, remoteIP: remoteIP, rawConnection: rawConnection}
+  // id is optional and will be generated if missing
+  api.Connection = function (data) {
+    this.setup(data)
+    api.connections.connections[this.id] = this
+
+    api.connections.globalMiddleware.forEach((middlewareName) =&#x3e; {
+      if (typeof api.connections.middleware[middlewareName].create === &#x27;function&#x27;) {
+        api.connections.middleware[middlewareName].create(this)
+      }
+    })
+  }
+
+  api.Connection.prototype.setup = function (data) {
+    if (data.id) {
+      this.id = data.id
+    } else {
+      this.id = this.generateID()
+    }
+    this.connectedAt = new Date().getTime();
+
+    [&#x27;type&#x27;, &#x27;rawConnection&#x27;].forEach((req) =&#x3e; {
+      if (data[req] === null || data[req] === undefined) { throw new Error(req + &#x27; is required to create a new connection object
+&#x27;) }
+      this[req] = data[req]
+    });
+
+    [&#x27;remotePort&#x27;, &#x27;remoteIP&#x27;].forEach((req) =&#x3e; {
+      if (data[req] === null || data[req] === undefined) {
+        if (api.config.general.enforceConnectionProperties === true) {
+          throw new Error(req + &#x27; is required to create a new connection object&#x27;)
+        } else {
+          data[req] = 0 // could be a random uuid as well?
+        }
+      }
+      this[req] = data[req]
+    })
+
+    const connectionDefaults = {
+      error: null,
+      fingerprint: this.id,
+      rooms: [],
+      params: {},
+      pendingActions: 0,
+      totalActions: 0,
+      messageCount: 0,
+      canChat: false
+    }
+
+    for (let i in connectionDefaults) {
+      if (this[i] === undefined &#x26;&#x26; data[i] !== undefined) { this[i] = data[i] }
+      if (this[i] === undefined) { this[i] = connectionDefaults[i] }
+    }
+
+    api.i18n.invokeConnectionLocale(this)
+  }
+
+  api.Connection.prototype.localize = function (message) {
+    // this.locale will be sourced automatically
+    return api.i18n.localize(message, this)
+  }
+
+  api.Connection.prototype.generateID = function () {
+    return uuid.v4()
+  }
+
+  api.Connection.prototype.destroy = function (callback) {
+    this.destroyed = true
+
+    api.connections.globalMiddleware ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.documentation" id="apidoc.module.actionhero.documentation">module actionhero.documentation</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.documentation.initialize" id="apidoc.element.actionhero.documentation.initialize">
+        function <span class="apidocSignatureSpan">actionhero.documentation.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.documentation = {
+    documentation: {},
+    build: () =&#x3e; {
+      let action
+      for (let i in api.actions.actions) {
+        for (let j in api.actions.actions[i]) {
+          action = api.actions.actions[i][j]
+          if (action.toDocument !== false) {
+            if (!api.documentation.documentation[action.name]) { api.documentation.documentation[action.name] = {} }
+            api.documentation.documentation[action.name][action.version] = {
+              name: action.name,
+              version: action.version,
+              description: action.description,
+              inputs: action.inputs,
+              outputExample: action.outputExample
+            }
+          }
+        }
+      }
+    }
+  }
+
+  api.documentation.build()
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.exceptions" id="apidoc.module.actionhero.exceptions">module actionhero.exceptions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.exceptions.initialize" id="apidoc.element.actionhero.exceptions.initialize">
+        function <span class="apidocSignatureSpan">actionhero.exceptions.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.exceptionHandlers = {}
+  api.exceptionHandlers.reporters = []
+
+  const consoleReporter = function (error, type, name, objects, severity) {
+    let extraMessages = []
+
+    if (type === &#x27;loader&#x27;) {
+      extraMessages.push(&#x27;! Failed to load &#x27; + objects.fullFilePath)
+    } else if (type === &#x27;action&#x27;) {
+      extraMessages.push(&#x27;! uncaught error from action: &#x27; + name)
+      extraMessages.push(&#x27;! connection details:&#x27;)
+      const relevantDetails = [&#x27;action&#x27;, &#x27;remoteIP&#x27;, &#x27;type&#x27;, &#x27;params&#x27;, &#x27;room&#x27;]
+      for (let i in relevantDetails) {
+        if (
+          objects.connection[relevantDetails[i]] !== null &#x26;&#x26;
+          objects.connection[relevantDetails[i]] !== undefined &#x26;&#x26;
+          typeof objects.connection[relevantDetails[i]] !== &#x27;function&#x27;
+        ) {
+          extraMessages.push(&#x27;!     &#x27; + relevantDetails[i] + &#x27;: &#x27; + JSON.stringify(objects.connection[relevantDetails[i]]))
+        }
+      }
+    } else if (type === &#x27;task&#x27;) {
+      extraMessages.push(&#x27;! error from task: &#x27; + name + &#x27; on queue &#x27; + objects.queue + &#x27; (worker #&#x27; + objects.workerId + &#x27;)&#x27;)
+      try {
+        extraMessages.push(&#x27;!     arguments: &#x27; + JSON.stringify(objects.task.args))
+      } catch (e) {}
+    } else {
+      extraMessages.push(&#x27;! Error: &#x27; + error.message)
+      extraMessages.push(&#x27;!     Type: &#x27; + type)
+      extraMessages.push(&#x27;!     Name: &#x27; + name)
+      extraMessages.push(&#x27;!     Data: &#x27; + JSON.stringify(objects))
+    }
+
+    for (let m in extraMessages) {
+      api.log(extraMessages[m], severity)
+    }
+    let lines
+    try {
+      lines = error.stack.split(os.EOL)
+    } catch (e) {
+      lines = new Error(error).stack.split(os.EOL)
+    }
+    for (let l in lines) {
+      let line = lines[l]
+      api.log(&#x27;! &#x27; + line, severity)
+    }
+    api.log(&#x27;*&#x27;, severity)
+  }
+
+  api.exceptionHandlers.reporters.push(consoleReporter)
+
+  api.exceptionHandlers.report = function (error, type, name, objects, severity) {
+    if (!severity) { severity = &#x27;error&#x27; }
+    for (let i in api.exceptionHandlers.reporters) {
+      api.exceptionHandlers.reporters[i](error, type, name, objects, severity)
+    }
+  }
+
+  // /////////
+  // TYPES //
+  // /////////
+
+  api.exceptionHandlers.loader = function (fullFilePath, error) {
+    let name = &#x27;loader:&#x27; + fullFilePath
+    api.exceptionHandlers.report(error, &#x27;loader&#x27;, name, {fullFilePath: fullFilePath}, &#x27;alert&#x27;)
+  }
+
+  api.exceptionHandlers.action = function (error, data, next) {
+    let simpleName
+    try {
+      simpleName = data.action
+    } catch (e) {
+      simpleName = error.message
+    }
+    let name = &#x27;action:&#x27; + simpleName
+    api.exceptionHandlers.report(error, &#x27;action&#x27;, name, {connection: data.connection}, &#x27;error&#x27;)
+    data.connection.response = {} // no partial responses
+    if (typeof next === &#x27;function&#x27;) { next() }
+  }
+
+  api.exceptionHandlers.task = function (error, queue, task, workerId) {
+    let simpleName
+    try {
+      simpleName = task[&#x27;class&#x27;]
+    } catch (e) {
+      simpleName = error.message
+    }
+    let name = &#x27;task:&#x27; + simpleName
+    api.exceptionHandlers.report(error, &#x27;task&#x27;, name, {task: task, queue: queue, workerId: workerId}, api.config.tasks.workerLogging
+.failure)
+  }
+
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.genericServer" id="apidoc.module.actionhero.genericServer">module actionhero.genericServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.genericServer.initialize" id="apidoc.element.actionhero.genericServer.initialize">
+        function <span class="apidocSignatureSpan">actionhero.genericServer.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  // I am the prototypical generic server that all other types of servers inherit from.
+  // I shouldn&#x27;t actually be used by a client
+  // Note the methods in this template server, as they are all required for &#x27;real&#x27; servers
+
+  // //////////////////
+  // COMMON METHODS //
+  // //////////////////
+
+  // options are meant to be configurable in &#x27;config.js&#x27;
+  // attributes are descriptions of the server:
+<span class="apidocCodeCommentSpan">  /*
+
+    attributes = {
+      canChat: true,
+      logConnections: true,
+      logExits: true,
+      sendWelcomeMessage: true,
+      verbs: [&#x27;say&#x27;, &#x27;detailsView&#x27;]
+    }
+
+  */
+</span>
+  api.GenericServer = function (name, options, attributes) {
+    this.type = name
+    this.options = options
+    this.attributes = attributes
+
+    // you can overwrite attributes with options
+    // this could cause some problems, be careful
+    for (let key in this.options) {
+      if (this.attributes[key] !== null &#x26;&#x26; this.attributes[key] !== undefined) {
+        this.attributes[key] = this.options[key]
+      }
+    }
+  }
+
+  util.inherits(api.GenericServer, EventEmitter)
+
+  api.GenericServer.prototype.buildConnection = function (data) {
+    const details = {
+      type: this.type,
+      id: data.id,
+      remotePort: data.remotePort,
+      remoteIP: data.remoteAddress,
+      rawConnection: data.rawConnection
+    }
+    if (this.attributes.canChat === true) { details.canChat = true }
+    if (data.fingerprint) { details.fingerprint = data.fingerprint }
+    let connection = new api.Connection(details)
+
+    connection.sendMessage = (message) =&#x3e; {
+      this.sendMessage(connection, message)
+    }
+
+    connection.sendFile = (path) =&#x3e; {
+      connection.params.file = path
+      this.processFile(connection)
+    }
+
+    this.emit(&#x27;connection&#x27;, connection)
+
+    if (this.attributes.logConnections === true) {
+      this.log(&#x27;new connection&#x27;, &#x27;info&#x27;, {to: connection.remoteIP})
+    }
+
+    if (this.attributes.sendWelcomeMessage === true) {
+      connection.sendMessage({welcome: api.config.general.welcomeMessage, context: &#x27;api&#x27;})
+    }
+
+    if (typeof this.attributes.sendWelcomeMessage === &#x27;number&#x27;) {
+      setTimeout(() =&#x3e; {
+        try {
+          connection.sendMessage({welcome: api.config.general.welcomeMessage, context: &#x27;api&#x27;})
+        } catch (e) {
+          api.log(e, &#x27;error&#x27;)
+        }
+      }, this.attributes.sendWelcomeMessage)
+    }
+  }
+
+  api.GenericServer.prototype.processAction = function (connection) {
+    const ActionProcessor = new api.ActionProcessor(connection, (data) =&#x3e; {
+      this.emit(&#x27;actionComplete&#x27;, data)
+    })
+
+    ActionProcessor.processAction()
+  }
+
+  api.GenericServer.prototype.processFile = function (connection) {
+    api.staticFile.get(connection, (connection, error, fileStream, mime, length, lastModified) =&#x3e; {
+      this.sendFile(connection, error, fileStream, mime, length, lastModified)
+    })
+  }
+
+  api.GenericServer.prototype.connections = function () {
+    let connections = []
+
+    for (let i in api.connections.connections) {
+      let connection = api.connections.connections[i]
+      if (connection.type === this.type) { connections.push(connection) }
+    }
+
+    return connections
+  }
+
+  api.GenericServer.prototype.log = function (message, severity, data) {
+    api.log([&#x27;[server: %s] %s&#x27;, this.type, message], severity, data)
+  }
+
+  const methodNotDefined = function () {
+    throw new Error(&#x27;The containing method should be defined for this server type&#x27;)
+  }
+
+  // /////////////////////////////////////
+  // METHODS WHICH MUST BE OVERWRITTEN //
+  // /////////////////////////////////////
+
+  // I am invoked as part of boot
+  api.GenericServer.prototype.start = function (next) { methodNotDefined() }
+
+  // I am invoked as part of shutdown
+  api.GenericServer.prototype.stop = function (next) { methodNotDefined() }
+
+  // This method will be appended to the connection as &#x27;connection.sendMessage&#x27;
+  api.GenericServer.prototype.sendMessage = function (connection, message) { methodNotDefined() }
+
+  // This method will be used to gracefully disconnect the client
+  api.GenericServer.prototype.goodbye = function (connection, re ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.id" id="apidoc.module.actionhero.id">module actionhero.id</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.id.initialize" id="apidoc.element.actionhero.id.initialize">
+        function <span class="apidocSignatureSpan">actionhero.id.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  if (argv.title) {
+    api.id = argv.title
+  } else if (process.env.ACTIONHERO_TITLE) {
+    api.id = process.env.ACTIONHERO_TITLE
+  } else if (!api.config.general.id) {
+    let externalIP = api.utils.getExternalIPAddress()
+    if (externalIP === false) {
+      let message = &#x27; * Error fetching this hosts external IP address; setting id base to \&#x27;actionhero\&#x27;&#x27;
+      try {
+        api.log(message, &#x27;crit&#x27;)
+      } catch (e) {
+        console.log(message)
+      }
+      externalIP = &#x27;actionhero&#x27;
+    }
+
+    api.id = externalIP
+    if (cluster.isWorker) { api.id += &#x27;:&#x27; + process.pid }
+  } else {
+    api.id = api.config.general.id
+  }
+
+  api.actionheroVersion = require(&#x27;..&#x27; + path.sep + &#x27;package.json&#x27;).version
+
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.id.start" id="apidoc.element.actionhero.id.start">
+        function <span class="apidocSignatureSpan">actionhero.id.</span>start
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
+  api.log([&#x27;server ID: %s&#x27;, api.id], &#x27;notice&#x27;)
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.params" id="apidoc.module.actionhero.params">module actionhero.params</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.params.initialize" id="apidoc.element.actionhero.params.initialize">
+        function <span class="apidocSignatureSpan">actionhero.params.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.params = {}
+
+  // special params we will always accept
+  api.params.globalSafeParams = [
+    &#x27;file&#x27;,
+    &#x27;apiVersion&#x27;,
+    &#x27;callback&#x27;,
+    &#x27;action&#x27;
+  ]
+
+  api.params.buildPostVariables = function () {
+    let postVariables = []
+    let i
+    let j
+
+    api.params.globalSafeParams.forEach(function (p) {
+      postVariables.push(p)
+    })
+
+    for (i in api.actions.actions) {
+      for (j in api.actions.actions[i]) {
+        let action = api.actions.actions[i][j]
+        for (let key in action.inputs) {
+          postVariables.push(key)
+        }
+      }
+    }
+
+    api.params.postVariables = api.utils.arrayUniqueify(postVariables)
+    return api.params.postVariables
+  }
+
+  api.params.buildPostVariables()
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.pids" id="apidoc.module.actionhero.pids">module actionhero.pids</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.pids.initialize" id="apidoc.element.actionhero.pids.initialize">
+        function <span class="apidocSignatureSpan">actionhero.pids.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.pids = {}
+  api.pids.pid = process.pid
+  api.pids.path = api.config.general.paths.pid[0] // it would be silly to have more than one pid
+
+  api.pids.sanitizeId = function () {
+    let pidfile = api.id
+    pidfile = pidfile.replace(new RegExp(&#x27;:&#x27;, &#x27;g&#x27;), &#x27;-&#x27;)
+    pidfile = pidfile.replace(new RegExp(&#x27; &#x27;, &#x27;g&#x27;), &#x27;_&#x27;)
+    pidfile = pidfile.replace(new RegExp(&#x27;\r&#x27;, &#x27;g&#x27;), &#x27;&#x27;) // eslint-disable-line
+    pidfile = pidfile.replace(new RegExp(&#x27;\n&#x27;, &#x27;g&#x27;), &#x27;&#x27;) // eslint-disable-line
+
+    return pidfile
+  }
+
+  if (cluster.isMaster) {
+    api.pids.title = &#x27;actionhero-&#x27; + api.pids.sanitizeId()
+  } else {
+    api.pids.title = api.pids.sanitizeId()
+  }
+
+  try { fs.mkdirSync(api.pids.path) } catch (e) {};
+
+  api.pids.writePidFile = function () {
+    fs.writeFileSync(api.pids.path + &#x27;/&#x27; + api.pids.title, api.pids.pid.toString(), &#x27;ascii&#x27;)
+  }
+
+  api.pids.clearPidFile = function () {
+    try {
+      fs.unlinkSync(api.pids.path + &#x27;/&#x27; + api.pids.title)
+    } catch (e) {
+      api.log(&#x27;Unable to remove pidfile&#x27;, &#x27;error&#x27;, e)
+    }
+  }
+
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.pids.start" id="apidoc.element.actionhero.pids.start">
+        function <span class="apidocSignatureSpan">actionhero.pids.</span>start
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
+  api.pids.writePidFile()
+  api.log([&#x27;pid: %s&#x27;, process.pid], &#x27;notice&#x27;)
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.resque" id="apidoc.module.actionhero.resque">module actionhero.resque</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.resque.initialize" id="apidoc.element.actionhero.resque.initialize">
+        function <span class="apidocSignatureSpan">actionhero.resque.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  const resqueOverrides = api.config.tasks.resque_overrides
+
+  api.resque = {
+    verbose: false,
+    queue: null,
+    multiWorker: null,
+    scheduler: null,
+    connectionDetails: {redis: api.redis.clients.tasks},
+
+    startQueue: function (callback) {
+      let Queue = NR.queue
+      if (resqueOverrides &#x26;&#x26; resqueOverrides.queue) { Queue = resqueOverrides.queue }
+      this.queue = new Queue({connection: this.connectionDetails}, api.tasks.jobs)
+
+      this.queue.on(&#x27;error&#x27;, (error) =&#x3e; {
+        api.log(error, &#x27;error&#x27;, &#x27;[api.resque.queue]&#x27;)
+      })
+
+      this.queue.connect(callback)
+    },
+
+    stopQueue: function (callback) {
+      if (api.resque.queue) { api.resque.queue.end(callback) } else { callback() }
+    },
+
+    startScheduler: function (callback) {
+      let Scheduler = NR.scheduler
+      if (resqueOverrides &#x26;&#x26; resqueOverrides.scheduler) { Scheduler = resqueOverrides.scheduler }
+      if (api.config.tasks.scheduler === true) {
+        this.schedulerLogging = api.config.tasks.schedulerLogging
+        this.scheduler = new Scheduler({connection: this.connectionDetails, timeout: api.config.tasks.timeout})
+
+        this.scheduler.on(&#x27;error&#x27;, (error) =&#x3e; {
+          api.log(error, &#x27;error&#x27;, &#x27;[api.resque.scheduler]&#x27;)
+        })
+
+        this.scheduler.connect(() =&#x3e; {
+          this.scheduler.on(&#x27;start&#x27;, () =&#x3e; { api.log(&#x27;resque scheduler started&#x27;, this.schedulerLogging.start) })
+          this.scheduler.on(&#x27;end&#x27;, () =&#x3e; { api.log(&#x27;resque scheduler ended&#x27;, this.schedulerLogging.end) })
+          this.scheduler.on(&#x27;poll&#x27;, () =&#x3e; { api.log(&#x27;resque scheduler polling&#x27;, this.schedulerLogging.poll) })
+          this.scheduler.on(&#x27;working_timestamp&#x27;, (timestamp) =&#x3e; { api.log([&#x27;resque scheduler working timestamp %s&#x27;, timestamp],
+this.schedulerLogging.working_timestamp) })
+          this.scheduler.on(&#x27;transferred_job&#x27;, (timestamp, job) =&#x3e; { api.log([&#x27;resque scheduler enqueuing job %s&#x27;, timestamp], this
+.schedulerLogging.transferred_job, job) })
+          this.scheduler.on(&#x27;master&#x27;, (state) =&#x3e; { api.log([&#x27;This node is now the Resque scheduler master&#x27;]) })
+
+          this.scheduler.start()
+          callback()
+        })
+      } else {
+        callback()
+      }
+    },
+
+    stopScheduler: function (callback) {
+      if (!this.scheduler) {
+        callback()
+      } else {
+        this.scheduler.end(() =&#x3e; {
+          delete this.scheduler
+          callback()
+        })
+      }
+    },
+
+    startMultiWorker: function (callback) {
+      let MultiWorker = NR.multiWorker
+      if (resqueOverrides &#x26;&#x26; resqueOverrides.multiWorker) { MultiWorker = resqueOverrides.multiWorker }
+      this.workerLogging = api.config.tasks.workerLogging
+      this.schedulerLogging = api.config.tasks.schedulerLogging
+
+      this.multiWorker = new MultiWorker({
+        connection: api.resque.connectionDetails,
+        queues: api.config.tasks.queues,
+        timeout: api.config.tasks.timeout,
+        checkTimeout: api.config.tasks.checkTimeout,
+        minTaskProcessors: api.config.tasks.minTaskProcessors,
+        maxTaskProcessors: api.config.tasks.maxTaskProcessors,
+        maxEventLoopDelay: api.config.tasks.maxEventLoopDelay,
+        toDisconnectProcessors: api.config.tasks.toDisconnectProcessors
+      }, api.tasks.jobs)
+
+      // normal worker emitters
+      this.multiWorker.on(&#x27;start&#x27;, (workerId) =&#x3e; { api.log(&#x27;worker: started&#x27;, this.workerLogging.start, {workerId: workerId}) })
+      this.multiWorker.on(&#x27;end&#x27;, (workerId) =&#x3e; { api.log(&#x27;worker: ended&#x27;, this.workerLogging.end, {workerId: workerId}) })
+      this.multiWorker.on(&#x27;cleaning_worker&#x27;, (workerId, worker, pid) =&#x3e; { api.log([&#x27;worker: cleaning old worker %s, (%s)&#x27;, worker
+, pid], this.workerLogging.cleaning_worker) })
+      this.multiWorker.on(&#x27;poll&#x27;, (workerId, queue) =&#x3e; { api.log([&#x27;worker: polling %s&#x27;, queue], this.workerLogging.poll, {workerId
+: workerId}) })
+      this.multiWorker.on(&#x27;job&#x27;, (workerId, queue, job) =&#x3e; { api.log([&#x27;worker: working job %s&#x27;, queue], this.workerLogging.job, {
+workerId: workerId, job: {class: job[&#x27;class&#x27;], queue: job.queue}}) })
+      this.multiWorke ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.resque.start" id="apidoc.element.actionhero.resque.start">
+        function <span class="apidocSignatureSpan">actionhero.resque.</span>start
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
+  if (api.config.tasks.minTaskProcessors === 0 &#x26;&#x26; api.config.tasks.maxTaskProcessors &#x3e; 0) {
+    api.config.tasks.minTaskProcessors = 1
+  }
+
+  api.resque.startQueue(function () {
+    api.resque.startScheduler(function () {
+      api.resque.startMultiWorker(function () {
+        next()
+      })
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.resque.stop" id="apidoc.element.actionhero.resque.stop">
+        function <span class="apidocSignatureSpan">actionhero.resque.</span>stop
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (api, next) {
+  api.resque.stopScheduler(function () {
+    api.resque.stopMultiWorker(function () {
+      api.resque.stopQueue(function () {
+        next()
+      })
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">stop</span>(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+  this.api.projectRoot = process.env.project_root
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.servers" id="apidoc.module.actionhero.servers">module actionhero.servers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.servers.initialize" id="apidoc.element.actionhero.servers.initialize">
+        function <span class="apidocSignatureSpan">actionhero.servers.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.servers = {}
+  api.servers.servers = {}
+
+  // Load the servers
+
+  let serverFolders = [
+    path.resolve(path.join(__dirname, &#x27;/../servers&#x27;))
+  ]
+
+  api.config.general.paths.server.forEach((p) =&#x3e; {
+    p = path.resolve(p)
+    if (serverFolders.indexOf(p) &#x3c; 0) {
+      serverFolders.push(p)
+    }
+  })
+
+  let jobs = []
+
+  serverFolders.forEach((p) =&#x3e; {
+    api.utils.recursiveDirectoryGlob(p).forEach((f) =&#x3e; {
+      let parts = f.split(/[/\\]+/)
+      let serverName = parts[(parts.length - 1)].split(&#x27;.&#x27;)[0]
+      if (api.config.servers[serverName] &#x26;&#x26; api.config.servers[serverName].enabled === true) {
+        let init = require(f).initialize
+        let options = api.config.servers[serverName]
+        jobs.push((done) =&#x3e; {
+          init(api, options, (serverObject) =&#x3e; {
+            api.servers.servers[serverName] = serverObject
+            api.log([&#x27;Initialized server: %s&#x27;, serverName], &#x27;debug&#x27;)
+            return done()
+          })
+        })
+      }
+      api.watchFileAndAct(f, () =&#x3e; {
+        api.log([&#x27;*** Rebooting due to server (%s) change ***&#x27;, serverName], &#x27;info&#x27;)
+        api.commands.restart()
+      })
+    })
+  })
+
+  async.series(jobs, next)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.servers.start" id="apidoc.element.actionhero.servers.start">
+        function <span class="apidocSignatureSpan">actionhero.servers.</span>start
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
+  let jobs = []
+  Object.keys(api.servers.servers).forEach((serverName) =&#x3e; {
+    let server = api.servers.servers[serverName]
+    if (server &#x26;&#x26; server.options.enabled === true) {
+      let message = &#x27;&#x27;
+      let messageArgs = []
+      message += &#x27;Starting server: `%s`&#x27;
+      messageArgs.push(serverName)
+      if (api.config.servers[serverName].bindIP) {
+        message += &#x27; @ %s&#x27;
+        messageArgs.push(api.config.servers[serverName].bindIP)
+      }
+      if (api.config.servers[serverName].port) {
+        message += &#x27;:%s&#x27;
+        messageArgs.push(api.config.servers[serverName].port)
+      }
+
+      jobs.push((done) =&#x3e; {
+        api.log([message].concat(messageArgs), &#x27;notice&#x27;)
+        server.start((error) =&#x3e; {
+          if (error) { return done(error) }
+          api.log([&#x27;Server started: %s&#x27;, serverName], &#x27;debug&#x27;)
+          return done()
+        })
+      })
+    }
+  })
+
+  async.series(jobs, next)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.servers.stop" id="apidoc.element.actionhero.servers.stop">
+        function <span class="apidocSignatureSpan">actionhero.servers.</span>stop
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (api, next) {
+  let jobs = []
+  Object.keys(api.servers.servers).forEach((serverName) =&#x3e; {
+    let server = api.servers.servers[serverName]
+    if ((server &#x26;&#x26; server.options.enabled === true) || !server) {
+      jobs.push((done) =&#x3e; {
+        api.log([&#x27;Stopping server: %s&#x27;, serverName], &#x27;notice&#x27;)
+        server.stop((error) =&#x3e; {
+          if (error) { return done(error) }
+          api.log([&#x27;Server stopped: %s&#x27;, serverName], &#x27;debug&#x27;)
+          return done()
+        })
+      })
+    }
+  })
+
+  async.series(jobs, next)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">stop</span>(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+  this.api.projectRoot = process.env.project_root
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.socket" id="apidoc.module.actionhero.socket">module actionhero.socket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.socket.initialize" id="apidoc.element.actionhero.socket.initialize">
+        function <span class="apidocSignatureSpan">actionhero.socket.</span>initialize
+        <span class="apidocSignatureSpan">(api, options, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, options, next) {
+  // ////////
+  // INIT //
+  // ////////
+
+  const type = &#x27;socket&#x27;
+  const attributes = {
+    canChat: true,
+    logConnections: true,
+    logExits: true,
+    pendingShutdownWaitLimit: 5000,
+    sendWelcomeMessage: true,
+    verbs: [
+      &#x27;quit&#x27;,
+      &#x27;exit&#x27;,
+      &#x27;documentation&#x27;,
+      &#x27;paramAdd&#x27;,
+      &#x27;paramDelete&#x27;,
+      &#x27;paramView&#x27;,
+      &#x27;paramsView&#x27;,
+      &#x27;paramsDelete&#x27;,
+      &#x27;roomAdd&#x27;,
+      &#x27;roomLeave&#x27;,
+      &#x27;roomView&#x27;,
+      &#x27;detailsView&#x27;,
+      &#x27;say&#x27;
+    ]
+  }
+
+  const server = new api.GenericServer(type, options, attributes)
+
+  // ////////////////////
+  // REQUIRED METHODS //
+  // ////////////////////
+
+  server.start = function (next) {
+    if (options.secure === false) {
+      server.server = net.createServer(api.config.servers.socket.serverOptions, (rawConnection) =&#x3e; {
+        handleConnection(rawConnection)
+      })
+    } else {
+      server.server = tls.createServer(api.config.servers.socket.serverOptions, (rawConnection) =&#x3e; {
+        handleConnection(rawConnection)
+      })
+    }
+
+    server.server.on(&#x27;error&#x27;, (e) =&#x3e; {
+      return next(new Error(&#x27;Cannot start socket server @ &#x27; + options.bindIP + &#x27;:&#x27; + options.port + &#x27; =&#x3e; &#x27; + e.message))
+    })
+
+    server.server.listen(options.port, options.bindIP, () =&#x3e; {
+      process.nextTick(next)
+    })
+  }
+
+  server.stop = function (next) {
+    gracefulShutdown(next)
+  }
+
+  server.sendMessage = function (connection, message, messageCount) {
+    if (message.error) {
+      message.error = api.config.errors.serializers.servers.socket(message.error)
+    }
+
+    if (connection.respondingTo) {
+      message.messageCount = messageCount
+      connection.respondingTo = null
+    } else if (message.context === &#x27;response&#x27;) {
+      if (messageCount) {
+        message.messageCount = messageCount
+      } else {
+        message.messageCount = connection.messageCount
+      }
+    }
+    try {
+      connection.rawConnection.write(JSON.stringify(message) + &#x27;\r\n&#x27;)
+    } catch (e) {
+      api.log([&#x27;socket write error: %s&#x27;, e], &#x27;error&#x27;)
+    }
+  }
+
+  server.goodbye = function (connection) {
+    try {
+      connection.rawConnection.end(JSON.stringify({status: connection.localize(api.config.servers.socket.goodbyeMessage), context
+: &#x27;api&#x27;}) + &#x27;\r\n&#x27;)
+    } catch (e) {}
+  }
+
+  server.sendFile = function (connection, error, fileStream) {
+    if (error) {
+      server.sendMessage(connection, error, connection.messageCount)
+    } else {
+      fileStream.pipe(connection.rawConnection, {end: false})
+    }
+  }
+
+  // //////////
+  // EVENTS //
+  // //////////
+
+  server.on(&#x27;connection&#x27;, function (connection) {
+    connection.params = {}
+
+    const parseLine = function (line) {
+      if (api.config.servers.socket.maxDataLength &#x3e; 0) {
+        let blen = Buffer.byteLength(line, &#x27;utf8&#x27;)
+        if (blen &#x3e; api.config.servers.socket.maxDataLength) {
+          let error = api.config.errors.dataLengthTooLarge(api.config.servers.socket.maxDataLength, blen)
+          server.log(error, &#x27;error&#x27;)
+          return server.sendMessage(connection, {status: &#x27;error&#x27;, error: error, context: &#x27;response&#x27;})
+        }
+      }
+      if (line.length &#x3e; 0) {
+        // increment at the start of the request so that responses can be caught in order on the client
+        // this is not handled by the GenericServer
+        connection.messageCount++
+        parseRequest(connection, line)
+      }
+    }
+
+    connection.rawConnection.on(&#x27;data&#x27;, (chunk) =&#x3e; {
+      if (checkBreakChars(chunk)) {
+        connection.destroy()
+      } else {
+        // Replace all carriage returns with newlines.
+        connection.rawConnection.socketDataString += chunk.toString(&#x27;utf-8&#x27;).replace(/\r/g, &#x27;\n&#x27;)
+        let index
+        let d = String(api.config.servers.socket.delimiter)
+
+        while ((index = connection.rawConnection.socketDataString.indexOf(d)) &#x3e; -1) {
+          let data = connection.rawConnection.socketDataString.slice(0, index)
+          connection.rawConnection.socketDataString = connection.rawConnection.socketDataString.slice(index + d.length)
+          data.split(d).forEach(parseLine)
+        } ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.specHelper" id="apidoc.module.actionhero.specHelper">module actionhero.specHelper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.specHelper.initialize" id="apidoc.element.actionhero.specHelper.initialize">
+        function <span class="apidocSignatureSpan">actionhero.specHelper.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  if (api.env === &#x27;test&#x27; || process.env.SPECHELPER === &#x27;true&#x27; || process.env.SPECHELPER === true) {
+    api.specHelper = {
+      returnMetadata: true
+    }
+
+    // create a test &#x27;server&#x27; to run actions
+    api.specHelper.initialize = function (api, options, next) {
+      const type = &#x27;testServer&#x27;
+      const attributes = {
+        canChat: true,
+        logConnections: false,
+        logExits: false,
+        sendWelcomeMessage: true,
+        verbs: api.connections.allowedVerbs
+      }
+
+      const server = new api.GenericServer(type, options, attributes)
+
+      server.start = function (next) {
+        api.log(&#x27;loading the testServer&#x27;, &#x27;warning&#x27;)
+        next()
+      }
+
+      server.stop = function (next) {
+        next()
+      }
+
+      server.sendMessage = function (connection, message, messageCount) {
+        process.nextTick(() =&#x3e; {
+          connection.messages.push(message)
+          if (typeof connection.actionCallbacks[messageCount] === &#x27;function&#x27;) {
+            connection.actionCallbacks[messageCount](message, connection)
+            delete connection.actionCallbacks[messageCount]
+          }
+        })
+      }
+
+      server.sendFile = function (connection, error, fileStream, mime, length) {
+        let content = &#x27;&#x27;
+        let response = {
+          error: error,
+          content: null,
+          mime: mime,
+          length: length
+        }
+
+        try {
+          if (!error) {
+            fileStream.on(&#x27;data&#x27;, (d) =&#x3e; { content += d })
+            fileStream.on(&#x27;end&#x27;, () =&#x3e; {
+              response.content = content
+              server.sendMessage(connection, response, connection.messageCount)
+            })
+          } else {
+            server.sendMessage(connection, response, connection.messageCount)
+          }
+        } catch (e) {
+          api.log(e, &#x27;warning&#x27;)
+          server.sendMessage(connection, response, connection.messageCount)
+        }
+      }
+
+      server.goodbye = function () {
+        //
+      }
+
+      server.on(&#x27;connection&#x27;, function (connection) {
+        connection.messages = []
+        connection.actionCallbacks = {}
+      })
+
+      server.on(&#x27;actionComplete&#x27;, function (data) {
+        if (typeof data.response === &#x27;string&#x27; || Array.isArray(data.response)) {
+          if (data.response.error) {
+            data.response = api.config.errors.serializers.servers.specHelper(data.response.error)
+          }
+        } else {
+          if (data.response.error) {
+            data.response.error = api.config.errors.serializers.servers.specHelper(data.response.error)
+          }
+
+          if (api.specHelper.returnMetadata) {
+            data.response.messageCount = data.messageCount
+
+            data.response.serverInformation = {
+              serverName: api.config.general.serverName,
+              apiVersion: api.config.general.apiVersion
+            }
+
+            data.response.requesterInformation = {
+              id: data.connection.id,
+              remoteIP: data.connection.remoteIP,
+              receivedParams: {}
+            }
+
+            for (let k in data.params) {
+              data.response.requesterInformation.receivedParams[k] = data.params[k]
+            }
+          }
+        }
+
+        if (data.toRender === true) {
+          server.sendMessage(data.connection, data.response, data.messageCount)
+        }
+      })
+
+      next(server)
+    }
+
+    api.specHelper.connection = function () {
+      let id = uuid.v4()
+      api.servers.servers.testServer.buildConnection({
+        id: id,
+        rawConnection: {},
+        remoteAddress: &#x27;testServer&#x27;,
+        remotePort: 0
+      })
+
+      return api.connections.connections[id]
+    }
+
+    api.specHelper.Connection = api.specHelper.connection
+
+    // create helpers to run an action
+    // data can be a params hash or a connection
+    api.specHelper.runAction = function (actionName, input, next) {
+      let connection
+      if (typeof input === &#x27;function&#x27; &#x26;&#x26; !next) {
+        next = input
+        input = {}
+      }
+      if (input.id &#x26;&#x26; input.type === &#x27;testServer&#x27;) {
+        connection = input
+      } else { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.specHelper.start" id="apidoc.element.actionhero.specHelper.start">
+        function <span class="apidocSignatureSpan">actionhero.specHelper.</span>start
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
+  if (api.env === &#x27;test&#x27; || process.env.SPECHELPER === &#x27;true&#x27; || process.env.SPECHELPER === true) {
+    api.specHelper.initialize(api, {}, (serverObject) =&#x3e; {
+      api.servers.servers.testServer = serverObject
+      api.servers.servers.testServer.start(() =&#x3e; {
+        next()
+      })
+    })
+  } else {
+    next()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
+  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+
+if (process.env.project_root) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.staticFile" id="apidoc.module.actionhero.staticFile">module actionhero.staticFile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.staticFile.initialize" id="apidoc.element.actionhero.staticFile.initialize">
+        function <span class="apidocSignatureSpan">actionhero.staticFile.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  api.staticFile = {
+
+    searchLoactions: [],
+
+    searchPath: function (connection, counter) {
+      if (!counter) { counter = 0 }
+      if (api.staticFile.searchLoactions.length === 0 || counter &#x3e;= api.staticFile.searchLoactions.length) {
+        return null
+      } else {
+        return api.staticFile.searchLoactions[counter]
+      }
+    },
+
+    // connection.params.file should be set
+    // callback is of the form: callback(connection, error, fileStream, mime, length)
+    get: function (connection, callback, counter) {
+      if (!counter) { counter = 0 }
+      if (!connection.params.file || !api.staticFile.searchPath(connection, counter)) {
+        this.sendFileNotFound(connection, api.config.errors.fileNotProvided(connection), callback)
+      } else {
+        let file
+        if (!path.isAbsolute(connection.params.file)) {
+          file = path.normalize(api.staticFile.searchPath(connection, counter) + &#x27;/&#x27; + connection.params.file)
+        } else {
+          file = connection.params.file
+        }
+
+        if (file.indexOf(path.normalize(api.staticFile.searchPath(connection, counter))) !== 0) {
+          api.staticFile.get(connection, callback, counter + 1)
+        } else {
+          this.checkExistence(file, (error, exists, truePath) =&#x3e; {
+            if (error) { throw error }
+            if (exists) {
+              this.sendFile(truePath, connection, callback)
+            } else {
+              api.staticFile.get(connection, callback, counter + 1)
+            }
+          })
+        }
+      }
+    },
+
+    sendFile: function (file, connection, callback) {
+      let lastModified
+      fs.stat(file, (error, stats) =&#x3e; {
+        if (error) {
+          this.sendFileNotFound(connection, api.config.errors.fileReadError(connection, String(error)), callback)
+        } else {
+          let mime = Mime.lookup(file)
+          let length = stats.size
+          let fileStream = fs.createReadStream(file)
+          let start = new Date().getTime()
+          lastModified = stats.mtime
+          fileStream.on(&#x27;end&#x27;, () =&#x3e; {
+            let duration = new Date().getTime() - start
+            this.logRequest(file, connection, length, duration, true)
+          })
+          fileStream.on(&#x27;error&#x27;, (error) =&#x3e; {
+            api.log(error)
+          })
+          fileStream.on(&#x27;open&#x27;, () =&#x3e; {
+            callback(connection, null, fileStream, mime, length, lastModified)
+          })
+        }
+      })
+    },
+
+    sendFileNotFound: function (connection, errorMessage, callback) {
+      connection.error = new Error(errorMessage)
+      this.logRequest(&#x27;{not found}&#x27;, connection, null, null, false)
+      callback(connection, api.config.errors.fileNotFound(connection), null, &#x27;text/html&#x27;, api.config.errors.fileNotFound(connection
+).length)
+    },
+
+    checkExistence: function (file, callback) {
+      fs.stat(file, (error, stats) =&#x3e; {
+        if (error) {
+          callback(null, false, file)
+        } else {
+          if (stats.isDirectory()) {
+            let indexPath = file + &#x27;/&#x27; + api.config.general.directoryFileType
+            api.staticFile.checkExistence(indexPath, callback)
+          } else if (stats.isSymbolicLink()) {
+            fs.readLink(file, function (error, truePath) {
+              if (error) {
+                callback(null, false, file)
+              } else {
+                truePath = path.normalize(truePath)
+                api.staticFile.checkExistence(truePath, callback)
+              }
+            })
+          } else if (stats.isFile()) {
+            callback(null, true, file)
+          } else {
+            callback(null, false, file)
+          }
+        }
+      })
+    },
+
+    logRequest: function (file, connection, length, duration, success) {
+      api.log([&#x27;[ file @ %s ]&#x27;, connection.type], api.config.general.fileRequestLogLevel, {
+        to: connection.remoteIP,
+        file: file,
+        requestedFile: connection.params.file,
+        size: length,
+        duration: duration,
+        success: success
+      })
+    }
+
+  }
+
+  // load in the explicit public paths first
+  if (api.config.general.paths ! ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.utils" id="apidoc.module.actionhero.utils">module actionhero.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.utils.initialize" id="apidoc.element.actionhero.utils.initialize">
+        function <span class="apidocSignatureSpan">actionhero.utils.</span>initialize
+        <span class="apidocSignatureSpan">(api, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
+  if (!api.utils) { api.utils = {} }
+
+  // //////////////////////////////////////////////////////////////////////////
+  // merge two hashes recursively
+  api.utils.hashMerge = function (a, b, arg) {
+    let c = {}
+    let i
+    let response
+
+    for (i in a) {
+      if (api.utils.isPlainObject(a[i]) &#x26;&#x26; Object.keys(a[i]).length &#x3e; 0) {
+        c[i] = api.utils.hashMerge(c[i], a[i], arg)
+      } else {
+        if (typeof a[i] === &#x27;function&#x27;) {
+          response = a[i](arg)
+          if (api.utils.isPlainObject(response)) {
+            c[i] = api.utils.hashMerge(c[i], response, arg)
+          } else {
+            c[i] = response
+          }
+        } else {
+          c[i] = a[i]
+        }
+      }
+    }
+    for (i in b) {
+      if (api.utils.isPlainObject(b[i]) &#x26;&#x26; Object.keys(b[i]).length &#x3e; 0) {
+        c[i] = api.utils.hashMerge(c[i], b[i], arg)
+      } else {
+        if (typeof b[i] === &#x27;function&#x27;) {
+          response = b[i](arg)
+          if (api.utils.isPlainObject(response)) {
+            c[i] = api.utils.hashMerge(c[i], response, arg)
+          } else {
+            c[i] = response
+          }
+        } else {
+          c[i] = b[i]
+        }
+      }
+    }
+    return c
+  }
+
+  api.utils.isPlainObject = function (o) {
+    const safeTypes = [Boolean, Number, String, Function, Array, Date, RegExp, Buffer]
+    const safeInstances = [&#x27;boolean&#x27;, &#x27;number&#x27;, &#x27;string&#x27;, &#x27;function&#x27;]
+    const expandPreventMatchKey = &#x27;_toExpand&#x27; // set `_toExpand = false` within an object if you don&#x27;t want to expand it
+    let i
+
+    if (!o) { return false }
+    if ((o instanceof Object) === false) { return false }
+    for (i in safeTypes) {
+      if (o instanceof safeTypes[i]) { return false }
+    }
+    for (i in safeInstances) {
+      if (typeof o === safeInstances[i]) { return false } //eslint-disable-line
+    }
+    if (o[expandPreventMatchKey] === false) { return false }
+    return (o.toString() === &#x27;[object Object]&#x27;)
+  }
+
+  // //////////////////////////////////////////////////////////////////////////
+  // string to hash
+  // http://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference
+  api.utils.stringToHash = function (path, object) {
+    if (!object) { object = api }
+    function _index (obj, i) { return obj[i] }
+    return path.split(&#x27;.&#x27;).reduce(_index, object)
+  }
+
+  // //////////////////////////////////////////////////////////////////////////
+  // unique-ify an array
+  api.utils.arrayUniqueify = function (arr) {
+    let a = []
+    for (let i = 0; i &#x3c; arr.length; i++) {
+      for (let j = i + 1; j &#x3c; arr.length; j++) {
+        if (arr[i] === arr[j]) { j = ++i }
+      }
+      a.push(arr[i])
+    }
+    return a
+  }
+
+  // //////////////////////////////////////////////////////////////////////////
+  // get all .js files in a directory
+  api.utils.recursiveDirectoryGlob = function (dir, extension, followLinkFiles) {
+    let results = []
+
+    if (!extension) { extension = &#x27;.js&#x27; }
+    if (!followLinkFiles) { followLinkFiles = true }
+
+    extension = extension.replace(&#x27;.&#x27;, &#x27;&#x27;)
+
+    if (fs.existsSync(dir)) {
+      fs.readdirSync(dir).forEach((file) =&#x3e; {
+        let fullFilePath = path.join(dir, file)
+        if (file[0] !== &#x27;.&#x27;) { // ignore &#x27;system&#x27; files
+          let stats = fs.statSync(fullFilePath)
+          let child
+          if (stats.isDirectory()) {
+            child = api.utils.recursiveDirectoryGlob(fullFilePath, extension, followLinkFiles)
+            child.forEach((c) =&#x3e; { results.push(c) })
+          } else if (stats.isSymbolicLink()) {
+            let realPath = fs.readlinkSync(fullFilePath)
+            child = api.utils.recursiveDirectoryGlob(realPath, extension, followLinkFiles)
+            child.forEach((c) =&#x3e; { results.push(c) })
+          } else if (stats.isFile()) {
+            let fileParts = file.split(&#x27;.&#x27;)
+            let ext = fileParts[(fileParts.length - 1)]
+            // real file match
+            if (ext === extension) { results.push(fullFilePath) }
+            // linkfile traversal
+            if (ext === &#x27;link&#x27; &#x26;&#x26; followLinkFiles === true) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.web" id="apidoc.module.actionhero.web">module actionhero.web</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.web.initialize" id="apidoc.element.actionhero.web.initialize">
+        function <span class="apidocSignatureSpan">actionhero.web.</span>initialize
+        <span class="apidocSignatureSpan">(api, options, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, options, next) {
+  // ////////
+  // INIT //
+  // ////////
+
+  const type = &#x27;web&#x27;
+  const attributes = {
+    canChat: false,
+    logConnections: false,
+    logExits: false,
+    sendWelcomeMessage: false,
+    verbs: [
+      // no verbs for connections of this type, as they are to be very short-lived
+    ]
+  }
+
+  const server = new api.GenericServer(type, options, attributes)
+
+  if ([&#x27;api&#x27;, &#x27;file&#x27;].indexOf(api.config.servers.web.rootEndpointType) &#x3c; 0) {
+    throw new Error(&#x27;api.config.servers.web.rootEndpointType can only be \&#x27;api\&#x27; or \&#x27;file\&#x27;&#x27;)
+  }
+
+  // ////////////////////
+  // REQUIRED METHODS //
+  // ////////////////////
+
+  server.start = function (next) {
+    if (options.secure === false) {
+      const http = require(&#x27;http&#x27;)
+      server.server = http.createServer((req, res) =&#x3e; {
+        handleRequest(req, res)
+      })
+    } else {
+      const https = require(&#x27;https&#x27;)
+      server.server = https.createServer(api.config.servers.web.serverOptions, (req, res) =&#x3e; {
+        handleRequest(req, res)
+      })
+    }
+
+    let bootAttempts = 0
+    server.server.on(&#x27;error&#x27;, (e) =&#x3e; {
+      bootAttempts++
+      if (bootAttempts &#x3c; api.config.servers.web.bootAttempts) {
+        server.log(&#x27;cannot boot web server; trying again [&#x27; + String(e) + &#x27;]&#x27;, &#x27;error&#x27;)
+        if (bootAttempts === 1) { cleanSocket(options.bindIP, options.port) }
+        setTimeout(() =&#x3e; {
+          server.log(&#x27;attempting to boot again..&#x27;)
+          server.server.listen(options.port, options.bindIP)
+        }, 1000)
+      } else {
+        return next(new Error(&#x27;cannot start web server @ &#x27; + options.bindIP + &#x27;:&#x27; + options.port + &#x27; =&#x3e; &#x27; + e.message))
+      }
+    })
+
+    server.server.listen(options.port, options.bindIP, () =&#x3e; {
+      chmodSocket(options.bindIP, options.port)
+      next()
+    })
+  }
+
+  server.stop = function (next) {
+    if (server.server) { server.server.close() }
+    process.nextTick(next)
+  }
+
+  server.sendMessage = function (connection, message) {
+    let stringResponse = &#x27;&#x27;
+    if (connection.rawConnection.method !== &#x27;HEAD&#x27;) {
+      stringResponse = String(message)
+    }
+
+    cleanHeaders(connection)
+    const headers = connection.rawConnection.responseHeaders
+    const responseHttpCode = parseInt(connection.rawConnection.responseHttpCode)
+
+    server.sendWithCompression(connection, responseHttpCode, headers, stringResponse)
+  }
+
+  server.sendFile = function (connection, error, fileStream, mime, length, lastModified) {
+    let foundCacheControl = false
+    let ifModifiedSince
+    let reqHeaders
+
+    connection.rawConnection.responseHeaders.forEach((pair) =&#x3e; {
+      if (pair[0].toLowerCase() === &#x27;cache-control&#x27;) { foundCacheControl = true }
+    })
+
+    connection.rawConnection.responseHeaders.push([&#x27;Content-Type&#x27;, mime])
+
+    if (fileStream) {
+      if (!foundCacheControl) { connection.rawConnection.responseHeaders.push([&#x27;Cache-Control&#x27;, &#x27;max-age=&#x27; + api.config.servers.
+web.flatFileCacheDuration + &#x27;, must-revalidate, public&#x27;]) }
+    }
+    if (fileStream &#x26;&#x26; !api.config.servers.web.enableEtag) {
+      if (lastModified) { connection.rawConnection.responseHeaders.push([&#x27;Last-Modified&#x27;, new Date(lastModified).toUTCString()]) }
+    }
+
+    cleanHeaders(connection)
+    const headers = connection.rawConnection.responseHeaders
+    reqHeaders = connection.rawConnection.req.headers
+
+    let sendRequestResult = function () {
+      let responseHttpCode = parseInt(connection.rawConnection.responseHttpCode, 10)
+      if (error) {
+        server.sendWithCompression(connection, responseHttpCode, headers, String(error))
+      } else if (responseHttpCode !== 304) {
+        server.sendWithCompression(connection, responseHttpCode, headers, null, fileStream, length)
+      } else {
+        connection.rawConnection.res.writeHead(responseHttpCode, transformHeaders(headers))
+        connection.rawConnection.res.end()
+        connection.destroy()
+      }
+    }
+
+    if (error) {
+      connection.rawConnection.responseHttpCode = 404
+      return sendRequestResult()
+    }
+
+    if (reqHeaders[&#x27;if-modified-since&#x27;]) {
+      ifModifiedSince = new Date(reqHeaders[&#x27;i ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.websocket" id="apidoc.module.actionhero.websocket">module actionhero.websocket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.websocket.initialize" id="apidoc.element.actionhero.websocket.initialize">
+        function <span class="apidocSignatureSpan">actionhero.websocket.</span>initialize
+        <span class="apidocSignatureSpan">(api, options, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, options, next) {
+  // ////////
+  // INIT //
+  // ////////
+
+  const type = &#x27;websocket&#x27;
+  const attributes = {
+    canChat: true,
+    logConnections: true,
+    logExits: true,
+    sendWelcomeMessage: true,
+    verbs: [
+      &#x27;quit&#x27;,
+      &#x27;exit&#x27;,
+      &#x27;documentation&#x27;,
+      &#x27;roomAdd&#x27;,
+      &#x27;roomLeave&#x27;,
+      &#x27;roomView&#x27;,
+      &#x27;detailsView&#x27;,
+      &#x27;say&#x27;
+    ]
+  }
+
+  const server = new api.GenericServer(type, options, attributes)
+
+  // ////////////////////
+  // REQUIRED METHODS //
+  // ////////////////////
+
+  server.start = function (next) {
+    const webserver = api.servers.servers.web
+    server.server = new Primus(webserver.server, api.config.servers.websocket.server)
+
+    server.server.on(&#x27;connection&#x27;, (rawConnection) =&#x3e; {
+      handleConnection(rawConnection)
+    })
+
+    server.server.on(&#x27;disconnection&#x27;, (rawConnection) =&#x3e; {
+      handleDisconnection(rawConnection)
+    })
+
+    api.log([&#x27;webSockets bound to %s: %s&#x27;, webserver.options.bindIP, webserver.options.port], &#x27;debug&#x27;)
+    server.active = true
+
+    server.writeClientJS()
+
+    next()
+  }
+
+  server.stop = function (next) {
+    server.active = false
+    if (api.config.servers.websocket.destroyClientsOnShutdown === true) {
+      server.connections().forEach((connection) =&#x3e; {
+        connection.destroy()
+      })
+    }
+    process.nextTick(next)
+  }
+
+  server.sendMessage = function (connection, message, messageCount) {
+    if (message.error) {
+      message.error = api.config.errors.serializers.servers.websocket(message.error)
+    }
+
+    if (!message.context) { message.context = &#x27;response&#x27; }
+    if (!messageCount) { messageCount = connection.messageCount }
+    if (message.context === &#x27;response&#x27; &#x26;&#x26; !message.messageCount) { message.messageCount = messageCount }
+    connection.rawConnection.write(message)
+  }
+
+  server.sendFile = function (connection, error, fileStream, mime, length, lastModified) {
+    let content = &#x27;&#x27;
+    let response = {
+      error: error,
+      content: null,
+      mime: mime,
+      length: length,
+      lastModified: lastModified
+    }
+
+    try {
+      if (!error) {
+        fileStream.on(&#x27;data&#x27;, function (d) { content += d })
+        fileStream.on(&#x27;end&#x27;, () =&#x3e; {
+          response.content = content
+          server.sendMessage(connection, response, connection.messageCount)
+        })
+      } else {
+        server.sendMessage(connection, response, connection.messageCount)
+      }
+    } catch (e) {
+      api.log(e, &#x27;warning&#x27;)
+      server.sendMessage(connection, response, connection.messageCount)
+    }
+  }
+
+  server.goodbye = function (connection) {
+    connection.rawConnection.end()
+  }
+
+  // //////////
+  // EVENTS //
+  // //////////
+
+  server.on(&#x27;connection&#x27;, function (connection) {
+    connection.rawConnection.on(&#x27;data&#x27;, (data) =&#x3e; {
+      handleData(connection, data)
+    })
+  })
+
+  server.on(&#x27;actionComplete&#x27;, function (data) {
+    if (data.toRender !== false) {
+      data.connection.response.messageCount = data.messageCount
+      server.sendMessage(data.connection, data.response, data.messageCount)
+    }
+  })
+
+  // //////////
+  // CLIENT //
+  // //////////
+
+  server.compileActionheroClientJS = function () {
+    let ahClientSource = fs.readFileSync(path.join(__dirname, &#x27;/../client/actionheroClient.js&#x27;)).toString()
+    let url = api.config.servers.websocket.clientUrl
+    ahClientSource = ahClientSource.replace(/%%URL%%/g, url)
+    let defaults = {}
+    for (let i in api.config.servers.websocket.client) {
+      defaults[i] = api.config.servers.websocket.client[i]
+    }
+    defaults.url = url
+    let defaultsString = util.inspect(defaults)
+    defaultsString = defaultsString.replace(&#x27;\&#x27;window.location.origin\&#x27;&#x27;, &#x27;window.location.origin&#x27;)
+    ahClientSource = ahClientSource.replace(&#x27;%%DEFAULTS%%&#x27;, &#x27;return &#x27; + defaultsString)
+
+    return ahClientSource
+  }
+
+  server.renderClientJS = function (minimize) {
+    if (!minimize) { minimize = false }
+    let libSource = api.servers.servers.websocket.server.library()
+    let ahClientSource = server.compileActionheroClientJS()
+    ahClientSource =
+      &#x27;;;;\r\n&#x27; +
+      &#x27;(function(exports){ \r\n&#x27; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
