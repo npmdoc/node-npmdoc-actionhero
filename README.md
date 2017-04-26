@@ -1,6 +1,6 @@
 # npmdoc-actionhero
 
-#### api documentation for  [actionhero (v16.0.5)](http://www.actionherojs.com)  [![npm package](https://img.shields.io/npm/v/npmdoc-actionhero.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-actionhero) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-actionhero.svg)](https://travis-ci.org/npmdoc/node-npmdoc-actionhero)
+#### basic api documentation for  [actionhero (v17.0.0)](http://www.actionherojs.com)  [![npm package](https://img.shields.io/npm/v/npmdoc-actionhero.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-actionhero) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-actionhero.svg)](https://travis-ci.org/npmdoc/node-npmdoc-actionhero)
 
 #### actionhero.js is a multi-transport API Server with integrated cluster capabilities and delayed tasks
 
@@ -36,6 +36,7 @@
         "etag": "^1.7.0",
         "fakeredis": "^2.0.0",
         "formidable": "^1.0.17",
+        "glob": "^7.1.1",
         "i18n": "^0.8.3",
         "ioredis": "^2.4.1",
         "is-running": "^2.0.1",
@@ -60,13 +61,13 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "16e9fa32c0a6da290a6acbe650b685b1fa617b36",
-        "tarball": "https://registry.npmjs.org/actionhero/-/actionhero-16.0.5.tgz"
+        "shasum": "196bbce94fe45534b44124bd5f553941d5dd2e01",
+        "tarball": "https://registry.npmjs.org/actionhero/-/actionhero-17.0.0.tgz"
     },
     "engines": {
         "node": ">=4.0.0"
     },
-    "gitHead": "badf4101059320c2637cf3c5acda8fef9f67009b",
+    "gitHead": "4e54d05ecf00136289bf09f73b47dca274c5d8b3",
     "homepage": "http://www.actionherojs.com",
     "keywords": [
         "api",
@@ -128,7 +129,7 @@
             "expect"
         ]
     },
-    "version": "16.0.5"
+    "version": "17.0.0"
 }
 ```
 
