@@ -51,7 +51,7 @@
 
         href="http://www.actionherojs.com"
 
-    >actionhero (v16.0.5)</a>
+    >actionhero (v17.0.0)</a>
 </h1>
 <h4>actionhero.js is a multi-transport API Server with integrated cluster capabilities and delayed tasks</h4>
 <div class="apidocSectionDiv"><a
@@ -65,15 +65,6 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.actionhero.actionhero">
             function <span class="apidocSignatureSpan"></span>actionhero
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.actionhero.toString">
-            function <span class="apidocSignatureSpan">actionhero.</span>toString
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -105,7 +96,13 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>config</span>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>cli</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>cluster</span>
 
         </li>
 
@@ -117,7 +114,19 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>console</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>documentation</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>enqueue</span>
 
         </li>
 
@@ -129,13 +138,37 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>generate</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>genericServer</span>
 
         </li>
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>id</span>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>help</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>initializer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>link</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>list</span>
 
         </li>
 
@@ -159,6 +192,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>server</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>servers</span>
 
         </li>
@@ -177,13 +216,37 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>start</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>staticFile</span>
 
         </li>
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>task</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>unlink</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.</span>version</span>
 
         </li>
 
@@ -298,29 +361,75 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.config">module actionhero.config</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.cli">module actionhero.cli</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.actionhero.config.initialize">
-            function <span class="apidocSignatureSpan">actionhero.config.</span>initialize
-            <span class="apidocSignatureSpan">(api, next)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.cli.run">
+            function <span class="apidocSignatureSpan">actionhero.cli.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
             </a>
 
         </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.actionhero.config.start">
-            function <span class="apidocSignatureSpan">actionhero.config.</span>start
-            <span class="apidocSignatureSpan">(api, callback)</span>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.cli.</span>inputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.cli.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.cli.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.cli.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.cluster">module actionhero.cluster</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.cluster.run">
+            function <span class="apidocSignatureSpan">actionhero.cluster.</span>run
+            <span class="apidocSignatureSpan">(api, data)</span>
             </a>
 
         </li>
 
         <li>
 
-            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.config.</span>loadPriority</span>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.cluster.</span>inputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.cluster.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.cluster.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.cluster.</span>name</span>
 
         </li>
 
@@ -345,6 +454,31 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.console">module actionhero.console</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.console.run">
+            function <span class="apidocSignatureSpan">actionhero.console.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.console.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.console.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
     <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.documentation">module actionhero.documentation</a><ol>
 
         <li>
@@ -359,6 +493,43 @@
         <li>
 
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.documentation.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.enqueue">module actionhero.enqueue</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.enqueue.run">
+            function <span class="apidocSignatureSpan">actionhero.enqueue.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.enqueue.</span>inputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.enqueue.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.enqueue.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.enqueue.</span>name</span>
 
         </li>
 
@@ -383,6 +554,31 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.generate">module actionhero.generate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.generate.run">
+            function <span class="apidocSignatureSpan">actionhero.generate.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.generate.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.generate.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
     <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.genericServer">module actionhero.genericServer</a><ol>
 
         <li>
@@ -402,35 +598,125 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.id">module actionhero.id</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.help">module actionhero.help</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.actionhero.id.initialize">
-            function <span class="apidocSignatureSpan">actionhero.id.</span>initialize
-            <span class="apidocSignatureSpan">(api, next)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.help.run">
+            function <span class="apidocSignatureSpan">actionhero.help.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
             </a>
 
         </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.actionhero.id.start">
-            function <span class="apidocSignatureSpan">actionhero.id.</span>start
-            <span class="apidocSignatureSpan">(api, next)</span>
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.help.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.help.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.initializer">module actionhero.initializer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.initializer.run">
+            function <span class="apidocSignatureSpan">actionhero.initializer.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
             </a>
 
         </li>
 
         <li>
 
-            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.id.</span>loadPriority</span>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.initializer.</span>inputs</span>
 
         </li>
 
         <li>
 
-            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.id.</span>startPriority</span>
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.initializer.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.initializer.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.initializer.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.link">module actionhero.link</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.link.run">
+            function <span class="apidocSignatureSpan">actionhero.link.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.link.</span>inputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.link.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.link.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.link.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.list">module actionhero.list</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.list.run">
+            function <span class="apidocSignatureSpan">actionhero.list.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.list.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.list.</span>name</span>
 
         </li>
 
@@ -538,6 +824,19 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.server">module actionhero.server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.server.initialize">
+            function <span class="apidocSignatureSpan">actionhero.server.</span>initialize
+            <span class="apidocSignatureSpan">(api, options, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
     <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.servers">module actionhero.servers</a><ol>
 
         <li>
@@ -634,6 +933,43 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.start">module actionhero.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.start.run">
+            function <span class="apidocSignatureSpan">actionhero.start.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.start.</span>inputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.start.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.start.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.start.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
     <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.staticFile">module actionhero.staticFile</a><ol>
 
         <li>
@@ -653,6 +989,80 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.task">module actionhero.task</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.task.run">
+            function <span class="apidocSignatureSpan">actionhero.task.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.task.</span>inputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.task.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.task.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.task.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.unlink">module actionhero.unlink</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.unlink.run">
+            function <span class="apidocSignatureSpan">actionhero.unlink.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">actionhero.unlink.</span>inputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.unlink.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.unlink.</span>example</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.unlink.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
     <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.utils">module actionhero.utils</a><ol>
 
         <li>
@@ -667,6 +1077,31 @@
         <li>
 
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">actionhero.utils.</span>loadPriority</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.actionhero.version">module actionhero.version</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.actionhero.version.run">
+            function <span class="apidocSignatureSpan">actionhero.version.</span>run
+            <span class="apidocSignatureSpan">(api, data, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.version.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">actionhero.version.</span>name</span>
 
         </li>
 
@@ -724,34 +1159,27 @@
 
 
 
-    <h2>
-        <a href="#apidoc.element.actionhero.toString" id="apidoc.element.actionhero.toString">
-        function <span class="apidocSignatureSpan">actionhero.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
 
-if (error &#x26;&#x26; typeof error === &#x27;string&#x27;) {
-  error = new Error(error)
-}
 
-if (error &#x26;&#x26; !this.response.error) {
-  if (typeof this.response === &#x27;string&#x27; || Array.isArray(this.response)) {
-    this.response = error.<span class="apidocCodeKeywordSpan">toString</span>()
-  } else {
-    this.response.error = error
-  }
-}
 
-this.incrementPendingActions(-1)
-this.duration = new Date().getTime() - this.actionStartTime
-...</pre></li>
-    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -935,10 +1363,10 @@ this.duration = new Date().getTime() - this.actionStartTime
       }
     }
 
-    api.log([&#x27;[ action @ %s ]&#x27;, this.connection.type], logLevel, logLine)
+    api.log(`[ action @ ${this.connection.type} ]`, logLevel, logLine)
   }
 
-  api.ActionProcessor.prototype.preProcessAction = function (callback) ...</pre></li>
+  api.ActionProcessor.prototype.preProcessAction = function (callback) { ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
@@ -1023,9 +1451,9 @@ this.api.projectRoot = process.cwd()
 
     const loadMessage = (action) =&#x3e; {
       if (reload) {
-        api.log([&#x27;action reloaded: %s @ v%s, %s&#x27;, action.name, action.version, fullFilePath], &#x27;debug&#x27;)
+        api.log(`action reloaded: ${action.name} @ v${action.version}, ${fullFilePath}`, &#x27;debug&#x27;)
       } else {
-        api.log([&#x27;action loaded: %s @ v%s, %s&#x27;, action.name, action.version, fullFilePath], &#x27;debug&#x27;)
+        api.log(`action loaded: ${action.name} @ v${action.version}, ${fullFilePath}`, &#x27;debug&#x27;)
       }
     }
 
@@ -1065,7 +1493,7 @@ this.api.projectRoot = process.cwd()
   }
 
   api.config.general.paths.action.forEach(function (p) {
-    api.utils.recursiveDirectoryGlob(p).forEach(function (f) {
+    glob.sync(path.join(p, &#x27;**&#x27;, &#x27;*.js&#x27;), {follow: true}).forEach(function (f) {
       api.actions.loadFile(f)
     })
   })
@@ -1225,7 +1653,7 @@ this.api.projectRoot = process.cwd()
       try { cacheObj = JSON.parse(cacheObj) } catch (e) {}
       if (!cacheObj) {
         if (typeof callback === &#x27;function&#x27;) {
-          return callback(new Error(api.i18n.localize(&#x27;Object not found&#x27;)), null, null, null, null)
+          return callback(new Error(api.i18n.localize(&#x27;actionhero.cache.objectNotFound&#x27;)), null, null, null, null)
         }
       } else if (cacheObj.expireTimestamp &#x3e;= new Date().getTime() || cacheObj.expireTimestamp === null) {
         const lastReadAt = cacheObj.readAt
@@ -1233,7 +1661,7 @@ this.api.projectRoot = process.cwd()
         cacheObj.readAt = new Date().getTime()
         if (cacheObj.expireTimestamp) {
           if (options.expireTimeMS) {
-            cacheObj.expireTimestamp = new Date().getTime() + options.expireTimeMS ...</pre></li>
+            cacheObj.expireTimestamp = new Date().getTime() + options ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
@@ -1418,7 +1846,7 @@ this.api.projectRoot = process.cwd()
 
   if (api.config.general.startingChatRooms) {
     for (let room in api.config.general.startingChatRooms) {
-      api.log([&#x27;ensuring the existence of the chatRoom: %s&#x27;, room])
+      api.log(`ensuring the existence of the chatRoom: ${room}`)
       api.chatRoom.add(room)
     }
   }
@@ -1452,183 +1880,119 @@ if (process.env.project_root) {
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.actionhero.config" id="apidoc.module.actionhero.config">module actionhero.config</a></h1>
+<h1><a href="#apidoc.module.actionhero.cli" id="apidoc.module.actionhero.cli">module actionhero.cli</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.actionhero.config.initialize" id="apidoc.element.actionhero.config.initialize">
-        function <span class="apidocSignatureSpan">actionhero.config.</span>initialize
-        <span class="apidocSignatureSpan">(api, next)</span>
+        <a href="#apidoc.element.actionhero.cli.run" id="apidoc.element.actionhero.cli.run">
+        function <span class="apidocSignatureSpan">actionhero.cli.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
-  // api.env
-
-  if (api._startingParams &#x26;&#x26; api._startingParams.api) {
-    api.utils.hashMerge(api, api._startingParams.api)
-  }
-
-  api.env = &#x27;development&#x27;
-
-  if (argv.NODE_ENV) {
-    api.env = argv.NODE_ENV
-  } else if (process.env.NODE_ENV) {
-    api.env = process.env.NODE_ENV
-  }
-
-  // reloading in development mode
-
-  api.watchedFiles = []
-
-  api.watchFileAndAct = function (file, callback) {
-    file = path.normalize(file)
-
-    if (!fs.existsSync(file)) {
-      throw new Error(file + &#x27; does not exist, and cannot be watched&#x27;)
-    }
-
-    if (api.config.general.developmentMode === true &#x26;&#x26; api.watchedFiles.indexOf(file) &#x3c; 0) {
-      api.watchedFiles.push(file)
-      fs.watchFile(file, {interval: 1000}, (curr, prev) =&#x3e; {
-        if (
-          api.running === true &#x26;&#x26;
-          api.config.general.developmentMode === true &#x26;&#x26;
-          curr.mtime &#x3e; prev.mtime
-        ) {
-          process.nextTick(() =&#x3e; {
-            let cleanPath = file
-            if (process.platform === &#x27;win32&#x27;) { cleanPath = file.replace(/\//g, &#x27;\\&#x27;) }
-            delete require.cache[require.resolve(cleanPath)]
-            callback(file)
-          })
-        }
-      })
-    }
-  }
-
-  api.unWatchAllFiles = function () {
-    for (let i in api.watchedFiles) {
-      fs.unwatchFile(api.watchedFiles[i])
-    }
-    api.watchedFiles = []
-  }
-
-  // We support multiple configuration paths as follows:
-  //
-  // 1. Use the project &#x27;config&#x27; folder, if it exists.
-  // 2. &#x22;actionhero --config=PATH1 --config=PATH2 --config=PATH3,PATH4&#x22;
-  // 3. &#x22;ACTIONHERO_CONFIG=PATH1,PATH2 npm start&#x22;
-  //
-  // Note that if --config or ACTIONHERO_CONFIG are used, they _overwrite_ the use of the default &#x22;config&#x22; folder. If
-  // you wish to use both, you need to re-specify &#x22;config&#x22;, e.g. &#x22;--config=config,local-config&#x22;. Also, note that
-  // specifying multiple --config options on the command line does exactly the same thing as using one parameter with
-  // comma separators, however the environment variable method only supports the comma-delimited syntax.
-  let configPaths = []
-
-  function addConfigPath (pathToCheck, alreadySplit) {
-    if (typeof pathToCheck === &#x27;string&#x27;) {
-      if (!alreadySplit) {
-        addConfigPath(pathToCheck.split(&#x27;,&#x27;), true)
-      } else {
-        if (pathToCheck.charAt(0) !== &#x27;/&#x27;) {
-          pathToCheck = path.resolve(api.projectRoot, pathToCheck)
-        }
-        if (fs.existsSync(pathToCheck)) {
-          configPaths.push(pathToCheck)
-        }
-      }
-    } else if (Array.isArray(pathToCheck)) {
-      pathToCheck.map((entry) =&#x3e; { addConfigPath(entry, alreadySplit) })
-    }
-  }
-
-  [argv.config, process.env.ACTIONHERO_CONFIG].map((entry) =&#x3e; { addConfigPath(entry, false) })
-
-  if (configPaths.length &#x3c; 1) {
-    addConfigPath(&#x27;config&#x27;, false)
-  }
-
-  if (configPaths.length &#x3c; 1) {
-    return next(new Error(configPaths + &#x27;No config directory found in this project, specified with --config, or found in process
-.env.ACTIONHERO_CONFIG&#x27;))
-  }
-
-  const rebootCallback = (file) =&#x3e; {
-    api.log([&#x27;*** rebooting due to config change (%s) ***&#x27;, file], &#x27;info&#x27;)
-    delete require.cache[require.resolve(file)]
-    api.commands.restart()
-  }
-
-  api.loadConfigDirectory = function (configPath, watch) {
-    const configFiles = api.utils.recursiveDirectoryGlob(configPath)
-
-    let loadRetries = 0
-    let loadErrors = {}
-    for (let i = 0, limit = configFiles.length; (i &#x3c; limit); i++) {
-      const f = configFiles[i]
-      try {
-        // attempt configuration file load
-        let localConfig = require(f)
-        if (localConfig[&#x27;default&#x27;]) { api.config = api.utils.hashMerge(api.config, localConfig[&#x27;default&#x27;], api) }
-        if (localConfig[api.env]) { api.config = api.utils.hashMerge(api.config, localConfig[api.env], api) }
-        // configuration file load success: clear retries and
-        // errors since progress has been made
-        loadRetries = 0
-        loadErrors = {}
-      } catch (error) {
-        // error loading configuration, abort if all remaining
-        // configuration files have been tried and failed
-        // indicating inability to progres ...</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  initialized: false,
-  shuttingDown: false
-}
-}
-
-actionhero.prototype.initialize = function (params, callback) {
-this.api.commands = {
-  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
-  start: (params, callback) =&#x3e; { this.start(params, callback) },
-  stop: (callback) =&#x3e; { this.stop(callback) },
-  restart: (callback) =&#x3e; { this.restart(callback) }
-}
-
-this.api.projectRoot = process.cwd()
-...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.actionhero.config.start" id="apidoc.element.actionhero.config.start">
-        function <span class="apidocSignatureSpan">actionhero.config.</span>start
-        <span class="apidocSignatureSpan">(api, callback)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">start = function (api, callback) {
-  api.log([&#x27;environment: %s&#x27;, api.env], &#x27;notice&#x27;)
-  callback()
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  return next(null, true)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  shuttingDown: false
-}
-}
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
 
-actionhero.prototype.initialize = function (params, callback) {
-this.api.commands = {
-  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
-  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
-  stop: (callback) =&#x3e; { this.stop(callback) },
-  restart: (callback) =&#x3e; { this.restart(callback) }
-}
-
-this.api.projectRoot = process.cwd()
-
-if (process.env.project_root) {
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
 ...</pre></li>
     </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.cluster" id="apidoc.module.actionhero.cluster">module actionhero.cluster</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.cluster.run" id="apidoc.element.actionhero.cluster.run">
+        function <span class="apidocSignatureSpan">actionhero.cluster.</span>run
+        <span class="apidocSignatureSpan">(api, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data) {
+  let options = {
+    execPath: path.normalize(path.join(__dirname, &#x27;/../../actionhero&#x27;)),
+    args: &#x27;start&#x27;,
+    silent: (data.params.silent === &#x27;true&#x27; || data.params.silent === true),
+    expectedWorkers: data.params.workers,
+    id: api.id,
+    buildEnv: (workerId) =&#x3e; {
+      let env = {}
+
+      for (let k in process.env) {
+        env[k] = process.env[k]
+      }
+
+      let title = data.params.workerTitlePrefix
+
+      if (!title || title === &#x27;&#x27;) {
+        title = &#x27;actionhero-worker-&#x27;
+      } else if (title === &#x27;hostname&#x27;) {
+        title = os.hostname() + &#x27;-&#x27;
+      }
+
+      title += workerId
+      env.title = title
+      env.ACTIONHERO_TITLE = title
+
+      return env
+    }
+  }
+
+  const ahc = new ActionHeroCluster(options)
+  ahc.start()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
 
 
 
@@ -1814,6 +2178,71 @@ this.api.projectRoot = process.cwd()
 </div>
 
 <div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.console" id="apidoc.module.actionhero.console">module actionhero.console</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.console.run" id="apidoc.element.actionhero.console.run">
+        function <span class="apidocSignatureSpan">actionhero.console.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  for (let i in api.config.servers) { api.config.servers[i].enabled = false }
+  api.config.general.developmentMode = false
+  api.config.tasks.scheduler = false
+  api.config.tasks.queues = []
+  api.config.tasks.minTaskProcessors = 0
+  api.config.tasks.maxTaskProcessors = 0
+
+  api.commands.start.call(api._context, function (error) {
+    if (error) { return next(error) }
+
+    setTimeout(() =&#x3e; {
+      const repl = REPL.start({
+        prompt: &#x27;[ AH::&#x27; + api.env + &#x27; ] &#x3e;&#x3e; &#x27;,
+        input: process.stdin,
+        output: process.stdout,
+        useGlobal: false
+      })
+
+      repl.context.api = api
+
+      repl.on(&#x27;exit&#x27;, function () {
+        next(null, true)
+      })
+    }, 500)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.actionhero.documentation" id="apidoc.module.actionhero.documentation">module actionhero.documentation</a></h1>
 
 
@@ -1867,6 +2296,66 @@ this.api.commands = {
 this.api.projectRoot = process.cwd()
 ...</pre></li>
     </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.enqueue" id="apidoc.module.actionhero.enqueue">module actionhero.enqueue</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.enqueue.run" id="apidoc.element.actionhero.enqueue.run">
+        function <span class="apidocSignatureSpan">actionhero.enqueue.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  if (!api.tasks.tasks[data.params.name]) { throw new Error(&#x27;Task &#x22;&#x27; + data.params.name + &#x27;&#x22; not found&#x27;) }
+
+  let args = {}
+  if (data.params.args) { args = JSON.parse(data.params.args) }
+  if (data.params.params) { args = JSON.parse(data.params.params) }
+
+  api.resque.startQueue(function () {
+    api.tasks.enqueue(data.params.name, args, function (error, toRun) {
+      if (error) {
+        api.log(error, &#x27;alert&#x27;)
+      } else {
+        api.log(&#x27;response&#x27;, &#x27;info&#x27;, toRun)
+      }
+      next(null, true)
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
 
 
 
@@ -2003,6 +2492,151 @@ this.api.projectRoot = process.cwd()
 </div>
 
 <div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.generate" id="apidoc.module.actionhero.generate">module actionhero.generate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.generate.run" id="apidoc.element.actionhero.generate.run">
+        function <span class="apidocSignatureSpan">actionhero.generate.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  // ////// DOCUMENTS ////////
+
+  let documents = {}
+
+  documents.projectMap = fs.readFileSync(path.join(__dirname, &#x27;/../templates/projectMap.txt&#x27;))
+
+  const oldFileMap = {
+    configApiJs: &#x27;/config/api.js&#x27;,
+    configLoggerJs: &#x27;/config/logger.js&#x27;,
+    configRedisJs: &#x27;/config/redis.js&#x27;,
+    configTasksJs: &#x27;/config/tasks.js&#x27;,
+    configErrorsJs: &#x27;/config/errors.js&#x27;,
+    configI18nJs: &#x27;/config/i18n.js&#x27;,
+    configRoutesJs: &#x27;/config/routes.js&#x27;,
+    configSocketJs: &#x27;/config/servers/socket.js&#x27;,
+    configWebJs: &#x27;/config/servers/web.js&#x27;,
+    configWebsocketJs: &#x27;/config/servers/websocket.js&#x27;,
+    packageJson: &#x27;/package.json&#x27;,
+    actionStatus: &#x27;/actions/status.js&#x27;,
+    actionChatRoom: &#x27;/actions/createChatRoom.js&#x27;,
+    actionDocumentation: &#x27;/actions/showDocumentation.js&#x27;,
+    publicIndex: &#x27;/public/index.html&#x27;,
+    publicChat: &#x27;/public/chat.html&#x27;,
+    publicLogo: &#x27;/public/logo/actionhero.png&#x27;,
+    publicCss: &#x27;/public/css/cosmo.css&#x27;,
+    exampleTest: &#x27;/test/template.js.example&#x27;,
+    enLocale: &#x27;/locales/en.json&#x27;
+  }
+
+  for (let name in oldFileMap) {
+    documents[name] = fs.readFileSync(path.join(__dirname, &#x27;/../../&#x27;, oldFileMap[name]))
+  }
+
+  const AHversionNumber = JSON.parse(documents.packageJson).version
+
+  documents.packageJson = String(fs.readFileSync(path.join(__dirname, &#x27;/../templates/package.json&#x27;)))
+  documents.packageJson = documents.packageJson.replace(&#x27;%%versionNumber%%&#x27;, AHversionNumber)
+  documents.readmeMd = String(fs.readFileSync(path.join(__dirname, &#x27;/../templates/README.md&#x27;)))
+
+  // ////// LOGIC ////////
+
+  api.log(&#x27;Generating a new actionhero project...&#x27;);
+
+  // make directories
+  [
+    &#x27;/actions&#x27;,
+    &#x27;/pids&#x27;,
+    &#x27;/config&#x27;,
+    &#x27;/config/servers&#x27;,
+    &#x27;/initializers&#x27;,
+    &#x27;/log&#x27;,
+    &#x27;/locales&#x27;,
+    &#x27;/bin&#x27;,
+    &#x27;/servers&#x27;,
+    &#x27;/public&#x27;,
+    &#x27;/public/javascript&#x27;,
+    &#x27;/public/css&#x27;,
+    &#x27;/public/logo&#x27;,
+    &#x27;/tasks&#x27;,
+    &#x27;/test&#x27;
+  ].forEach(function (dir) {
+    api.utils.createDirSafely(api.projectRoot + dir)
+  })
+
+  // make files
+  const newFileMap = {
+    &#x27;/config/api.js&#x27;: &#x27;configApiJs&#x27;,
+    &#x27;/config/logger.js&#x27;: &#x27;configLoggerJs&#x27;,
+    &#x27;/config/redis.js&#x27;: &#x27;configRedisJs&#x27;,
+    &#x27;/config/tasks.js&#x27;: &#x27;configTasksJs&#x27;,
+    &#x27;/config/errors.js&#x27;: &#x27;configErrorsJs&#x27;,
+    &#x27;/config/i18n.js&#x27;: &#x27;configI18nJs&#x27;,
+    &#x27;/config/routes.js&#x27;: &#x27;configRoutesJs&#x27;,
+    &#x27;/config/servers/socket.js&#x27;: &#x27;configSocketJs&#x27;,
+    &#x27;/config/servers/web.js&#x27;: &#x27;configWebJs&#x27;,
+    &#x27;/config/servers/websocket.js&#x27;: &#x27;configWebsocketJs&#x27;,
+    &#x27;/package.json&#x27;: &#x27;packageJson&#x27;,
+    &#x27;/actions/status.js&#x27;: &#x27;actionStatus&#x27;,
+    &#x27;/actions/createChatRoom.js&#x27;: &#x27;actionChatRoom&#x27;,
+    &#x27;/actions/showDocumentation.js&#x27;: &#x27;actionDocumentation&#x27;,
+    &#x27;/public/index.html&#x27;: &#x27;publicIndex&#x27;,
+    &#x27;/public/chat.html&#x27;: &#x27;publicChat&#x27;,
+    &#x27;/public/css/cosmo.css&#x27;: &#x27;publicCss&#x27;,
+    &#x27;/public/logo/actionhero.png&#x27;: &#x27;publicLogo&#x27;,
+    &#x27;/README.md&#x27;: &#x27;readmeMd&#x27;,
+    &#x27;/test/example.js&#x27;: &#x27;exampleTest&#x27;,
+    &#x27;/locales/en.json&#x27;: &#x27;enLocale&#x27;
+  }
+
+  for (let file in newFileMap) {
+    api.utils.createFileSafely(api.projectRoot + file, documents[newFileMap[file]])
+  }
+
+  api.log(&#x27;&#x27;)
+  api.log(&#x27;Generation Complete.  Your project directory should look like this:&#x27;)
+
+  api.log(&#x27;&#x27;)
+  documents.projectMap.toString().split(&#x27;\n&#x27;).forEach(function (line) {
+    api.log(line)
+  })
+
+  api.log(&#x27;You may need to run `npm install` to install some dependancies&#x27;, &#x27;alert&#x27;)
+  api.log(&#x27;Run \&#x27;npm start\&#x27; to start your server&#x27;)
+
+  next(null, true)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.actionhero.genericServer" id="apidoc.module.actionhero.genericServer">module actionhero.genericServer</a></h1>
 
 
@@ -2080,13 +2714,13 @@ this.api.projectRoot = process.cwd()
     }
 
     if (this.attributes.sendWelcomeMessage === true) {
-      connection.sendMessage({welcome: api.config.general.welcomeMessage, context: &#x27;api&#x27;})
+      connection.sendMessage({welcome: connection.localize(&#x27;actionhero.welcomeMessage&#x27;), context: &#x27;api&#x27;})
     }
 
     if (typeof this.attributes.sendWelcomeMessage === &#x27;number&#x27;) {
       setTimeout(() =&#x3e; {
         try {
-          connection.sendMessage({welcome: api.config.general.welcomeMessage, context: &#x27;api&#x27;})
+          connection.sendMessage({welcome: connection.localize(&#x27;actionhero.welcomeMessage&#x27;), context: &#x27;api&#x27;})
         } catch (e) {
           api.log(e, &#x27;error&#x27;)
         }
@@ -2120,7 +2754,7 @@ this.api.projectRoot = process.cwd()
   }
 
   api.GenericServer.prototype.log = function (message, severity, data) {
-    api.log([&#x27;[server: %s] %s&#x27;, this.type, message], severity, data)
+    api.log(`[server: ${this.type}] ${message}`, severity, data)
   }
 
   const methodNotDefined = function () {
@@ -2141,7 +2775,7 @@ this.api.projectRoot = process.cwd()
   api.GenericServer.prototype.sendMessage = function (connection, message) { methodNotDefined() }
 
   // This method will be used to gracefully disconnect the client
-  api.GenericServer.prototype.goodbye = function (connection, re ...</pre></li>
+  api.GenericServer.prototype.goodbye ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
@@ -2166,90 +2800,311 @@ this.api.projectRoot = process.cwd()
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.actionhero.id" id="apidoc.module.actionhero.id">module actionhero.id</a></h1>
+<h1><a href="#apidoc.module.actionhero.help" id="apidoc.module.actionhero.help">module actionhero.help</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.actionhero.id.initialize" id="apidoc.element.actionhero.id.initialize">
-        function <span class="apidocSignatureSpan">actionhero.id.</span>initialize
-        <span class="apidocSignatureSpan">(api, next)</span>
+        <a href="#apidoc.element.actionhero.help.run" id="apidoc.element.actionhero.help.run">
+        function <span class="apidocSignatureSpan">actionhero.help.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, next) {
-  if (argv.title) {
-    api.id = argv.title
-  } else if (process.env.ACTIONHERO_TITLE) {
-    api.id = process.env.ACTIONHERO_TITLE
-  } else if (!api.config.general.id) {
-    let externalIP = api.utils.getExternalIPAddress()
-    if (externalIP === false) {
-      let message = &#x27; * Error fetching this hosts external IP address; setting id base to \&#x27;actionhero\&#x27;&#x27;
-      try {
-        api.log(message, &#x27;crit&#x27;)
-      } catch (e) {
-        console.log(message)
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  let files = []
+  let methods = {}
+
+  glob.sync(api.actionheroRoot + &#x27;/bin/methods/**&#x27;, {follow: true}).forEach(function (f) {
+    files.push(f)
+  })
+
+  glob.sync(api.projectRoot + &#x27;/bin/**&#x27;, {follow: true}).forEach(function (f) {
+    files.push(f)
+  })
+
+  files.forEach((f) =&#x3e; {
+    try {
+      let req = require(f)
+      if (req.name &#x26;&#x26; req.name !== &#x27;%%name%%&#x27; &#x26;&#x26; req.description &#x26;&#x26; typeof req.run === &#x27;function&#x27;) {
+        if (methods[req.name]) { throw new Error(`${req.name} is already defined`) }
+        methods[req.name] = req
       }
-      externalIP = &#x27;actionhero&#x27;
+    } catch (e) {
+      //
+    }
+  })
+
+  let methodNames = Object.keys(methods).sort()
+
+  console.log(&#x27;ActionHero - A multi-transport node.js API Server with integrated cluster capabilities and delayed tasks\r\n&#x27;)
+  console.log(&#x27;Binary options:\r\n&#x27;)
+  methodNames.forEach((methodName) =&#x3e; {
+    console.log(`* ${methodName}`)
+  })
+
+  console.log(&#x27;\r\nDescriptions:&#x27;)
+  methodNames.forEach((methodName) =&#x3e; {
+    let m = methods[methodName]
+    console.log(`\r\n* ${m.name}`)
+    console.log(`  description: ${m.description}`)
+
+    if (m.example) {
+      console.log(`  example: ${m.example}`)
     }
 
-    api.id = externalIP
-    if (cluster.isWorker) { api.id += &#x27;:&#x27; + process.pid }
-  } else {
-    api.id = api.config.general.id
-  }
+    if (!m.inputs) { m.inputs = {} }
+    if (Object.keys(m.inputs).length &#x3e; 0) {
+      console.log(`  inputs:`)
+      Object.keys(m.inputs).forEach((inputName) =&#x3e; {
+        let i = m.inputs[inputName]
+        console.log(`    [${inputName}] ${(i.required ? &#x27;&#x27; : &#x27;(optional)&#x27;)}`)
+        if (i.note) { console.log(`      note: ${i.note}`) }
+        if (i.default) { console.log(`      default: ${i.default}`) }
+      })
+    }
+  })
 
-  api.actionheroVersion = require(&#x27;..&#x27; + path.sep + &#x27;package.json&#x27;).version
-
-  next()
+  next(null, true)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  initialized: false,
-  shuttingDown: false
-}
-}
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
 
-actionhero.prototype.initialize = function (params, callback) {
-this.api.commands = {
-  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
-  start: (params, callback) =&#x3e; { this.start(params, callback) },
-  stop: (callback) =&#x3e; { this.stop(callback) },
-  restart: (callback) =&#x3e; { this.restart(callback) }
-}
-
-this.api.projectRoot = process.cwd()
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
 ...</pre></li>
     </ul>
 
 
 
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.initializer" id="apidoc.module.actionhero.initializer">module actionhero.initializer</a></h1>
+
+
     <h2>
-        <a href="#apidoc.element.actionhero.id.start" id="apidoc.element.actionhero.id.start">
-        function <span class="apidocSignatureSpan">actionhero.id.</span>start
-        <span class="apidocSignatureSpan">(api, next)</span>
+        <a href="#apidoc.element.actionhero.initializer.run" id="apidoc.element.actionhero.initializer.run">
+        function <span class="apidocSignatureSpan">actionhero.initializer.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
-  api.log([&#x27;server ID: %s&#x27;, api.id], &#x27;notice&#x27;)
-  next()
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  let template = fs.readFileSync(path.join(__dirname, &#x27;/../../templates/initializer.js&#x27;))
+  template = String(template);
+
+  [
+    &#x27;name&#x27;,
+    &#x27;loadPriority&#x27;,
+    &#x27;startPriority&#x27;,
+    &#x27;stopPriority&#x27;
+  ].forEach(function (v) {
+    let regex = new RegExp(&#x27;%%&#x27; + v + &#x27;%%&#x27;, &#x27;g&#x27;)
+    template = template.replace(regex, data.params[v])
+  })
+
+  api.utils.createFileSafely(api.config.general.paths.initializer[0] + &#x27;/&#x27; + data.params.name + &#x27;.js&#x27;, template)
+
+  next(null, true)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  shuttingDown: false
-}
-}
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
 
-actionhero.prototype.initialize = function (params, callback) {
-this.api.commands = {
-  initialize: (params, callback) =&#x3e; { this.initialize(params, callback) },
-  start: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">start</span>(params, callback) },
-  stop: (callback) =&#x3e; { this.stop(callback) },
-  restart: (callback) =&#x3e; { this.restart(callback) }
-}
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
 
-this.api.projectRoot = process.cwd()
 
-if (process.env.project_root) {
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.link" id="apidoc.module.actionhero.link">module actionhero.link</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.link.run" id="apidoc.element.actionhero.link.run">
+        function <span class="apidocSignatureSpan">actionhero.link.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  let linkRelativeBase = api.projectRoot + path.sep
+  let pluginRoot
+  let overwriteConfig = false
+
+  api.config.general.paths.plugin.forEach(function (pluginPath) {
+    let pluginPathAttempt = path.normalize(pluginPath + path.sep + data.params.name)
+    if (!pluginRoot &#x26;&#x26; api.utils.dirExists(pluginPath + path.sep + data.params.name)) {
+      pluginRoot = pluginPathAttempt
+    }
+  })
+
+  if (!pluginRoot) {
+    api.log(`plugin \`${data.params.name}\` not found in plugin paths`, &#x27;warning&#x27;, api.config.general.paths.plugin)
+    return next(null, true)
+  }
+
+  let pluginRootRelative = pluginRoot.replace(linkRelativeBase, &#x27;&#x27;)
+  api.log(`linking the plugin found at ${pluginRootRelative}`);
+
+  // link actionable files
+  [
+    [&#x27;action&#x27;, &#x27;actions&#x27;],
+    [&#x27;task&#x27;, &#x27;tasks&#x27;],
+    [&#x27;public&#x27;, &#x27;public&#x27;],
+    [&#x27;server&#x27;, &#x27;servers&#x27;],
+    [&#x27;initializer&#x27;, &#x27;initializers&#x27;]
+  ].forEach(function (c) {
+    let localLinkDirectory = api.config.general.paths[c[0]][0] + path.sep + &#x27;plugins&#x27;
+    let localLinkLocation = path.normalize(localLinkDirectory + path.sep + data.params.name + &#x27;.link&#x27;)
+    let pluginSubSection = path.normalize(pluginRootRelative + path.sep + c[1])
+
+    if (api.utils.dirExists(pluginSubSection)) {
+      api.utils.createDirSafely(localLinkDirectory)
+      api.utils.createLinkfileSafely(localLinkLocation, c[1], pluginSubSection)
+    }
+  })
+
+  const copyFiles = function (dir, prepend) {
+    if (!prepend) { prepend = &#x27;&#x27; }
+    if (api.utils.dirExists(dir)) {
+      fs.readdirSync(dir).forEach(function (pluginConfigFile) {
+        const file = path.normalize(dir + path.sep + pluginConfigFile)
+        const stats = fs.lstatSync(file)
+        if (stats.isDirectory()) {
+          copyFiles(file, (prepend + path.sep + pluginConfigFile + path.sep))
+        } else {
+          const content = fs.readFileSync(file)
+          const fileParts = pluginConfigFile.split(path.sep)
+          let localConfigFile = linkRelativeBase + &#x27;config&#x27; + path.sep + prepend + fileParts[(fileParts.length - 1)]
+          if (process.env.ACTIONHERO_CONFIG) {
+            localConfigFile = process.env.ACTIONHERO_CONFIG + path.sep + prepend + fileParts[(fileParts.length - 1)]
+          }
+          api.utils.createFileSafely(path.normalize(localConfigFile), content, overwriteConfig)
+        }
+      })
+    }
+  }
+
+  // copy config files
+  const pluginConfigDir = pluginRoot + path.sep + &#x27;config&#x27;
+  copyFiles(pluginConfigDir)
+  next(null, true)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.list" id="apidoc.module.actionhero.list">module actionhero.list</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.list.run" id="apidoc.element.actionhero.list.run">
+        function <span class="apidocSignatureSpan">actionhero.list.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  for (let actionName in api.actions.actions) {
+    api.log(actionName)
+    let collection = api.actions.actions[actionName]
+
+    for (let version in collection) {
+      let action = collection[version]
+      api.log(`  version: ${version}`)
+      api.log(`    ${action.description}`)
+      api.log(`    inputs:`)
+      for (let input in action.inputs) {
+        api.log(`      ${input}: ${JSON.stringify(action.inputs[input])}`)
+      }
+    }
+  }
+
+  next(null)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
 ...</pre></li>
     </ul>
 
@@ -2407,7 +3262,7 @@ this.api.projectRoot = process.cwd()
     <ul>
     <li>description and source-code<pre class="apidocCodePre">start = function (api, next) {
   api.pids.writePidFile()
-  api.log([&#x27;pid: %s&#x27;, process.pid], &#x27;notice&#x27;)
+  api.log(`pid: ${process.pid}`, &#x27;notice&#x27;)
   next()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -2488,11 +3343,11 @@ if (process.env.project_root) {
           this.scheduler.on(&#x27;start&#x27;, () =&#x3e; { api.log(&#x27;resque scheduler started&#x27;, this.schedulerLogging.start) })
           this.scheduler.on(&#x27;end&#x27;, () =&#x3e; { api.log(&#x27;resque scheduler ended&#x27;, this.schedulerLogging.end) })
           this.scheduler.on(&#x27;poll&#x27;, () =&#x3e; { api.log(&#x27;resque scheduler polling&#x27;, this.schedulerLogging.poll) })
-          this.scheduler.on(&#x27;working_timestamp&#x27;, (timestamp) =&#x3e; { api.log([&#x27;resque scheduler working timestamp %s&#x27;, timestamp],
-this.schedulerLogging.working_timestamp) })
-          this.scheduler.on(&#x27;transferred_job&#x27;, (timestamp, job) =&#x3e; { api.log([&#x27;resque scheduler enqueuing job %s&#x27;, timestamp], this
+          this.scheduler.on(&#x27;working_timestamp&#x27;, (timestamp) =&#x3e; { api.log(`resque scheduler working timestamp ${timestamp}`, this
+.schedulerLogging.working_timestamp) })
+          this.scheduler.on(&#x27;transferred_job&#x27;, (timestamp, job) =&#x3e; { api.log(`resque scheduler enqueuing job ${timestamp}`, this
 .schedulerLogging.transferred_job, job) })
-          this.scheduler.on(&#x27;master&#x27;, (state) =&#x3e; { api.log([&#x27;This node is now the Resque scheduler master&#x27;]) })
+          this.scheduler.on(&#x27;master&#x27;, (state) =&#x3e; { api.log(&#x27;This node is now the Resque scheduler master&#x27;) })
 
           this.scheduler.start()
           callback()
@@ -2533,13 +3388,13 @@ this.schedulerLogging.working_timestamp) })
       // normal worker emitters
       this.multiWorker.on(&#x27;start&#x27;, (workerId) =&#x3e; { api.log(&#x27;worker: started&#x27;, this.workerLogging.start, {workerId: workerId}) })
       this.multiWorker.on(&#x27;end&#x27;, (workerId) =&#x3e; { api.log(&#x27;worker: ended&#x27;, this.workerLogging.end, {workerId: workerId}) })
-      this.multiWorker.on(&#x27;cleaning_worker&#x27;, (workerId, worker, pid) =&#x3e; { api.log([&#x27;worker: cleaning old worker %s, (%s)&#x27;, worker
-, pid], this.workerLogging.cleaning_worker) })
-      this.multiWorker.on(&#x27;poll&#x27;, (workerId, queue) =&#x3e; { api.log([&#x27;worker: polling %s&#x27;, queue], this.workerLogging.poll, {workerId
-: workerId}) })
-      this.multiWorker.on(&#x27;job&#x27;, (workerId, queue, job) =&#x3e; { api.log([&#x27;worker: working job %s&#x27;, queue], this.workerLogging.job, {
-workerId: workerId, job: {class: job[&#x27;class&#x27;], queue: job.queue}}) })
-      this.multiWorke ...</pre></li>
+      this.multiWorker.on(&#x27;cleaning_worker&#x27;, (workerId, worker, pid) =&#x3e; { api.log(`worker: cleaning old worker ${worker}, (${pid
+})`, this.workerLogging.cleaning_worker) })
+      this.multiWorker.on(&#x27;poll&#x27;, (workerId, queue) =&#x3e; { api.log(`worker: polling ${queue}`, this.workerLogging.poll, {workerId:
+workerId}) })
+      this.multiWorker.on(&#x27;job&#x27;, (workerId, queue, job) =&#x3e; { api.log(`worker: working job ${queue}`, this.workerLogging.job, {workerId
+: workerId, job: {class: job[&#x27;class&#x27;], queue: job.queue}}) })
+      this.multiWorker.on(&#x27;reEnqueue&#x27;, ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
@@ -2646,6 +3501,97 @@ if (process.env.project_root) {
 </div>
 
 <div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.server" id="apidoc.module.actionhero.server">module actionhero.server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.server.initialize" id="apidoc.element.actionhero.server.initialize">
+        function <span class="apidocSignatureSpan">actionhero.server.</span>initialize
+        <span class="apidocSignatureSpan">(api, options, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (api, options, next) {
+  // ////////
+  // INIT //
+  // ////////
+
+  const type = &#x27;%%name%%&#x27;
+
+  const attributes = {
+    canChat: true,
+    logConnections: true,
+    logExits: true,
+    sendWelcomeMessage: true,
+    verbs: []
+  }
+
+  const server = new api.GenericServer(type, options, attributes)
+
+  // ////////////////////
+  // REQUIRED METHODS //
+  // ////////////////////
+
+  server.start = function (next) {
+    return next()
+  }
+
+  server.stop = function (next) {
+    return next()
+  }
+
+  server.sendMessage = function (connection, message, messageCount) {
+
+  }
+
+  server.sendFile = function (connection, error, fileStream, mime, length) {
+
+  }
+
+  server.goodbye = function (connection, reason) {
+
+  }
+
+  // //////////
+  // EVENTS //
+  // //////////
+
+  server.on(&#x27;connection&#x27;, function (connection) {
+
+  })
+
+  server.on(&#x27;actionComplete&#x27;, function (data) {
+
+  })
+
+  // ///////////
+  // HELPERS //
+  // ///////////
+
+  next(server)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  initialized: false,
+  shuttingDown: false
+}
+}
+
+actionhero.prototype.initialize = function (params, callback) {
+this.api.commands = {
+  initialize: (params, callback) =&#x3e; { this.<span class="apidocCodeKeywordSpan">initialize</span>(params, callback) },
+  start: (params, callback) =&#x3e; { this.start(params, callback) },
+  stop: (callback) =&#x3e; { this.stop(callback) },
+  restart: (callback) =&#x3e; { this.restart(callback) }
+}
+
+this.api.projectRoot = process.cwd()
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.actionhero.servers" id="apidoc.module.actionhero.servers">module actionhero.servers</a></h1>
 
 
@@ -2676,7 +3622,7 @@ if (process.env.project_root) {
   let jobs = []
 
   serverFolders.forEach((p) =&#x3e; {
-    api.utils.recursiveDirectoryGlob(p).forEach((f) =&#x3e; {
+    glob.sync(path.join(p, &#x27;**&#x27;, &#x27;*.js&#x27;), {follow: true}).forEach((f) =&#x3e; {
       let parts = f.split(/[/\\]+/)
       let serverName = parts[(parts.length - 1)].split(&#x27;.&#x27;)[0]
       if (api.config.servers[serverName] &#x26;&#x26; api.config.servers[serverName].enabled === true) {
@@ -2685,13 +3631,13 @@ if (process.env.project_root) {
         jobs.push((done) =&#x3e; {
           init(api, options, (serverObject) =&#x3e; {
             api.servers.servers[serverName] = serverObject
-            api.log([&#x27;Initialized server: %s&#x27;, serverName], &#x27;debug&#x27;)
+            api.log(`Initialized server: ${serverName}`, &#x27;debug&#x27;)
             return done()
           })
         })
       }
       api.watchFileAndAct(f, () =&#x3e; {
-        api.log([&#x27;*** Rebooting due to server (%s) change ***&#x27;, serverName], &#x27;info&#x27;)
+        api.log(`*** Rebooting due to server (${serverName}) change ***`, &#x27;info&#x27;)
         api.commands.restart()
       })
     })
@@ -2732,23 +3678,19 @@ this.api.projectRoot = process.cwd()
     let server = api.servers.servers[serverName]
     if (server &#x26;&#x26; server.options.enabled === true) {
       let message = &#x27;&#x27;
-      let messageArgs = []
-      message += &#x27;Starting server: `%s`&#x27;
-      messageArgs.push(serverName)
+      message += `Starting server: \`${serverName}\``
       if (api.config.servers[serverName].bindIP) {
-        message += &#x27; @ %s&#x27;
-        messageArgs.push(api.config.servers[serverName].bindIP)
+        message += ` @ ${api.config.servers[serverName].bindIP}`
       }
       if (api.config.servers[serverName].port) {
-        message += &#x27;:%s&#x27;
-        messageArgs.push(api.config.servers[serverName].port)
+        message += `:${api.config.servers[serverName].port}`
       }
 
       jobs.push((done) =&#x3e; {
-        api.log([message].concat(messageArgs), &#x27;notice&#x27;)
+        api.log(message, &#x27;notice&#x27;)
         server.start((error) =&#x3e; {
           if (error) { return done(error) }
-          api.log([&#x27;Server started: %s&#x27;, serverName], &#x27;debug&#x27;)
+          api.log(`Server started: ${serverName}`, &#x27;debug&#x27;)
           return done()
         })
       })
@@ -2791,10 +3733,10 @@ if (process.env.project_root) {
     let server = api.servers.servers[serverName]
     if ((server &#x26;&#x26; server.options.enabled === true) || !server) {
       jobs.push((done) =&#x3e; {
-        api.log([&#x27;Stopping server: %s&#x27;, serverName], &#x27;notice&#x27;)
+        api.log(`Stopping server: ${serverName}`, &#x27;notice&#x27;)
         server.stop((error) =&#x3e; {
           if (error) { return done(error) }
-          api.log([&#x27;Server stopped: %s&#x27;, serverName], &#x27;debug&#x27;)
+          api.log(`Server stopped: ${serverName}`, &#x27;debug&#x27;)
           return done()
         })
       })
@@ -2919,14 +3861,13 @@ if (process.env.project_root) {
     try {
       connection.rawConnection.write(JSON.stringify(message) + &#x27;\r\n&#x27;)
     } catch (e) {
-      api.log([&#x27;socket write error: %s&#x27;, e], &#x27;error&#x27;)
+      api.log(`socket write error: ${e}`, &#x27;error&#x27;)
     }
   }
 
   server.goodbye = function (connection) {
     try {
-      connection.rawConnection.end(JSON.stringify({status: connection.localize(api.config.servers.socket.goodbyeMessage), context
-: &#x27;api&#x27;}) + &#x27;\r\n&#x27;)
+      connection.rawConnection.end(JSON.stringify({status: connection.localize(&#x27;actionhero.goodbyeMessage&#x27;), context: &#x27;api&#x27;}) + &#x27;\r\n&#x27;)
     } catch (e) {}
   }
 
@@ -2975,7 +3916,11 @@ if (process.env.project_root) {
           let data = connection.rawConnection.socketDataString.slice(0, index)
           connection.rawConnection.socketDataString = connection.rawConnection.socketDataString.slice(index + d.length)
           data.split(d).forEach(parseLine)
-        } ...</pre></li>
+        }
+      }
+    })
+
+    con ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
@@ -3209,6 +4154,171 @@ if (process.env.project_root) {
 </div>
 
 <div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.start" id="apidoc.module.actionhero.start">module actionhero.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.start.run" id="apidoc.element.actionhero.start.run">
+        function <span class="apidocSignatureSpan">actionhero.start.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  let state
+
+  // number of ms to wait to do a forcible shutdown if actionhero won&#x27;t stop gracefully
+  let shutdownTimeout = 1000 * 30
+  if (process.env.ACTIONHERO_SHUTDOWN_TIMEOUT) {
+    shutdownTimeout = parseInt(process.env.ACTIONHERO_SHUTDOWN_TIMEOUT)
+  }
+
+  const startServer = function (callback) {
+    state = &#x27;starting&#x27;
+    if (cluster.isWorker) { process.send({state: state}) }
+    api._context.start(function (error, apiFromCallback) {
+      if (error) {
+        api.log(error)
+        process.exit(1)
+      } else {
+        state = &#x27;started&#x27;
+        if (cluster.isWorker) { process.send({state: state}) }
+        api = apiFromCallback
+        checkForInernalStop()
+        if (typeof callback === &#x27;function&#x27;) { callback(null, api) }
+      }
+    })
+  }
+
+  const stopServer = function (callback) {
+    state = &#x27;stopping&#x27;
+    if (cluster.isWorker) { process.send({state: state}) }
+    api._context.stop(function () {
+      state = &#x27;stopped&#x27;
+      if (cluster.isWorker) { process.send({state: state}) }
+      api = null
+      if (typeof callback === &#x27;function&#x27;) { callback(null, api) }
+    })
+  }
+
+  const restartServer = function (callback) {
+    state = &#x27;restarting&#x27;
+    if (cluster.isWorker) { process.send({state: state}) }
+    api._context.restart(function (error, apiFromCallback) {
+      if (error) { throw (error) }
+
+      state = &#x27;started&#x27;
+      if (cluster.isWorker) { process.send({state: state}) }
+      api = apiFromCallback
+      if (typeof callback === &#x27;function&#x27;) { callback(null, api) }
+    })
+  }
+
+  const stopProcess = function () {
+    setTimeout(function () {
+      throw new Error(&#x27;process stop timeout reached.  terminating now.&#x27;)
+    }, shutdownTimeout)
+    // finalTimer.unref();
+    stopServer(function () {
+      process.nextTick(function () {
+        process.exit()
+      })
+    })
+  }
+
+  let checkForInernalStopTimer
+  const checkForInernalStop = function () {
+    clearTimeout(checkForInernalStopTimer)
+    if (api.running !== true &#x26;&#x26; state === &#x27;started&#x27;) {
+      process.exit(0)
+    }
+    checkForInernalStopTimer = setTimeout(checkForInernalStop, shutdownTimeout)
+  }
+
+  if (cluster.isWorker) {
+    process.on(&#x27;message&#x27;, function (msg) {
+      if (msg === &#x27;start&#x27;) {
+        startServer()
+      } else if (msg === &#x27;stop&#x27;) {
+        stopServer()
+      } else if (msg === &#x27;stopProcess&#x27;) {
+        stopProcess()
+      // in cluster, we cannot re-bind the port
+      // so kill this worker, and then let the cluster start a new worker
+      } else if (msg === &#x27;restart&#x27;) { stopProcess() }
+    })
+
+    process.on(&#x27;uncaughtException&#x27;, function (error) {
+      let stack
+      try {
+        stack = error.stack.split(os.EOL)
+      } catch (e) {
+        stack = [error]
+      }
+      process.send({uncaughtException: {
+        message: error.message,
+        stack: stack
+      }})
+      process.nextTick(process.exit)
+    })
+
+    process.on(&#x27;unhandledRejection&#x27;, function (reason, p) {
+      process.send({unhandledRejection: {reason: reason, p: p}})
+      process.nextTick(process.exit)
+    })
+  }
+
+  process.on(&#x27;SIGINT&#x27;, function () { stopProcess() })
+  process.on(&#x27;SIGTERM&#x27;, function () { stopProcess() })
+  process.on(&#x27;SIGUSR2&#x27;, function () { restartServer() })
+
+  if (process.platform === &#x27;win32&#x27; &#x26;&#x26; !process.env.IISNODE_VERSION) {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    })
+    rl.on(&#x27;SIGINT&#x27;, function () {
+      process.emit(&#x27;SIGINT&#x27;)
+    })
+  }
+
+  // start the server!
+  startServer(function () {
+    next(false, false)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.actionhero.staticFile" id="apidoc.module.actionhero.staticFile">module actionhero.staticFile</a></h1>
 
 
@@ -3321,7 +4431,7 @@ if (process.env.project_root) {
     },
 
     logRequest: function (file, connection, length, duration, success) {
-      api.log([&#x27;[ file @ %s ]&#x27;, connection.type], api.config.general.fileRequestLogLevel, {
+      api.log(`[ file @ ${connection.type} ]`, api.config.general.fileRequestLogLevel, {
         to: connection.remoteIP,
         file: file,
         requestedFile: connection.params.file,
@@ -3334,7 +4444,7 @@ if (process.env.project_root) {
   }
 
   // load in the explicit public paths first
-  if (api.config.general.paths ! ...</pre></li>
+  if (api.config.general.paths !== ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
@@ -3352,6 +4462,148 @@ this.api.commands = {
 this.api.projectRoot = process.cwd()
 ...</pre></li>
     </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.task" id="apidoc.module.actionhero.task">module actionhero.task</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.task.run" id="apidoc.element.actionhero.task.run">
+        function <span class="apidocSignatureSpan">actionhero.task.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  let template = fs.readFileSync(path.join(__dirname, &#x27;/../../templates/task.js&#x27;))
+  template = String(template);
+
+  [
+    &#x27;name&#x27;,
+    &#x27;description&#x27;,
+    &#x27;queue&#x27;,
+    &#x27;frequency&#x27;
+  ].forEach(function (v) {
+    let regex = new RegExp(&#x27;%%&#x27; + v + &#x27;%%&#x27;, &#x27;g&#x27;)
+    template = template.replace(regex, data.params[v])
+  })
+
+  api.utils.createFileSafely(api.config.general.paths.task[0] + &#x27;/&#x27; + data.params.name + &#x27;.js&#x27;, template)
+
+  next(null, true)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.unlink" id="apidoc.module.actionhero.unlink">module actionhero.unlink</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.unlink.run" id="apidoc.element.actionhero.unlink.run">
+        function <span class="apidocSignatureSpan">actionhero.unlink.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  const linkRelativeBase = api.projectRoot + path.sep
+  let pluginRoot
+
+  api.config.general.paths.plugin.forEach(function (pluginPath) {
+    const pluginPathAttempt = path.normalize(pluginPath + path.sep + data.params.name)
+    if (!pluginRoot &#x26;&#x26; api.utils.dirExists(pluginPath + path.sep + data.params.name)) {
+      pluginRoot = pluginPathAttempt
+    }
+  })
+
+  if (!pluginRoot) {
+    api.log(`plugin \`${data.params.name}\` not found in plugin paths`, &#x27;warning&#x27;, api.config.general.paths.plugin)
+    return next(null, true)
+  }
+
+  const pluginRootRelative = pluginRoot.replace(linkRelativeBase, &#x27;&#x27;)
+  api.log(`unlinking the plugin found at ${pluginRootRelative}`);
+
+  // unlink actionable files
+  [
+    [&#x27;action&#x27;, &#x27;actions&#x27;],
+    [&#x27;task&#x27;, &#x27;tasks&#x27;],
+    [&#x27;public&#x27;, &#x27;public&#x27;],
+    [&#x27;server&#x27;, &#x27;servers&#x27;],
+    [&#x27;initializer&#x27;, &#x27;initializers&#x27;]
+  ].forEach(function (c) {
+    const localLinkDirectory = path.normalize(api.config.general.paths[c[0]][0] + path.sep + &#x27;plugins&#x27;)
+    const localLinkLocation = path.normalize(localLinkDirectory + path.sep + data.params.name + &#x27;.link&#x27;)
+
+    if (api.utils.dirExists(localLinkDirectory)) {
+      api.utils.removeLinkfileSafely(localLinkLocation)
+    }
+  })
+
+  api.log(&#x27;Remember that config files have to be deleted manually&#x27;, &#x27;warning&#x27;)
+  api.log(&#x27;If your plugin was installed via NPM, also be sure to remove it from your package.json or uninstall it with &#x22;npm uninstall
+ --save&#x22;&#x27;, &#x27;warning&#x27;)
+  next(null, true)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
+
+
+
+
 
 
 
@@ -3455,35 +4707,43 @@ this.api.projectRoot = process.cwd()
   }
 
   // //////////////////////////////////////////////////////////////////////////
-  // get all .js files in a directory
-  api.utils.recursiveDirectoryGlob = function (dir, extension, followLinkFiles) {
-    let results = []
+  // object Clone
+  api.utils.objClone = function (obj) {
+    return Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyNames(obj).reduce((memo, name) =&#x3e; {
+      return (memo[name] = Object.getOwnPropertyDescriptor(obj, name)) &#x26;&#x26; memo
+    }, {}))
+  }
 
-    if (!extension) { extension = &#x27;.js&#x27; }
-    if (!followLinkFiles) { followLinkFiles = true }
+  // //////////////////////////////////////////////////////////////////////////
+  // attempt to collapse this object to an array; ie: {&#x22;0&#x22;: &#x22;a&#x22;, &#x22;1&#x22;: &#x22;b&#x22;}
+  api.utils.collapseObjectToArray = function (obj) {
+    try {
+      const keys = Object.keys(obj)
+      if (keys.length &#x3c; 1) { return false }
+      if (keys[0] !== &#x27;0&#x27;) { return false }
+      if (keys[(keys.length - 1)] !== String(keys.length - 1)) { return false }
 
-    extension = extension.replace(&#x27;.&#x27;, &#x27;&#x27;)
+      let arr = []
+      for (let i in keys) {
+        let key = keys[i]
+        if (String(parseInt(key)) !== key) { return false } else { arr.push(obj[key]) }
+      }
 
-    if (fs.existsSync(dir)) {
-      fs.readdirSync(dir).forEach((file) =&#x3e; {
-        let fullFilePath = path.join(dir, file)
-        if (file[0] !== &#x27;.&#x27;) { // ignore &#x27;system&#x27; files
-          let stats = fs.statSync(fullFilePath)
-          let child
-          if (stats.isDirectory()) {
-            child = api.utils.recursiveDirectoryGlob(fullFilePath, extension, followLinkFiles)
-            child.forEach((c) =&#x3e; { results.push(c) })
-          } else if (stats.isSymbolicLink()) {
-            let realPath = fs.readlinkSync(fullFilePath)
-            child = api.utils.recursiveDirectoryGlob(realPath, extension, followLinkFiles)
-            child.forEach((c) =&#x3e; { results.push(c) })
-          } else if (stats.isFile()) {
-            let fileParts = file.split(&#x27;.&#x27;)
-            let ext = fileParts[(fileParts.length - 1)]
-            // real file match
-            if (ext === extension) { results.push(fullFilePath) }
-            // linkfile traversal
-            if (ext === &#x27;link&#x27; &#x26;&#x26; followLinkFiles === true) { ...</pre></li>
+      return arr
+    } catch (e) {
+      return false
+    }
+  }
+
+  // //////////////////////////////////////////////////////////////////////////
+  // get this servers external interface
+  api.utils.getExternalIPAddress = function () {
+    const os = require(&#x27;os&#x27;)
+    const ifaces = os.networkInterfaces()
+    let ip = false
+    for (let dev in ifaces) {
+      ifaces[dev].forEach((details) =&#x3e; {
+        if (details.family === &#x27;IPv4&#x27; &#x26;&#x26; details.ad ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
@@ -3501,6 +4761,48 @@ this.api.commands = {
 this.api.projectRoot = process.cwd()
 ...</pre></li>
     </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.actionhero.version" id="apidoc.module.actionhero.version">module actionhero.version</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.actionhero.version.run" id="apidoc.element.actionhero.version.run">
+        function <span class="apidocSignatureSpan">actionhero.version.</span>run
+        <span class="apidocSignatureSpan">(api, data, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (api, data, next) {
+  console.log(packageJSON.version)
+  next(null, true)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// reload utils, as they won&#x27;t have been loaded yet
+api.utils = require(path.normalize(path.join(__dirname, &#x27;/../initializers/utils.js&#x27;))).initialize(api, function (error
+) {
+  if (error) { throw error }
+
+  // when generating the project from scratch, we cannot rely on the normal initilizers
+  const runner = require(path.join(__dirname, &#x27;methods&#x27;, commands.join(path.sep) + &#x27;.js&#x27;))
+  let params = formatParams(api, runner)
+  runner.<span class="apidocCodeKeywordSpan">run</span>(api, {params: params}, function (error) {
+    if (error) { throw error }
+    setTimeout(process.exit, 500, 0)
+  })
+})
+} else {
+actionhero.initialize({configChanges: configChanges}, function (error, api) {
+  if (error) { throw error }
+...</pre></li>
+    </ul>
+
+
 
 
 
@@ -3712,7 +5014,7 @@ this.api.projectRoot = process.cwd()
       handleDisconnection(rawConnection)
     })
 
-    api.log([&#x27;webSockets bound to %s: %s&#x27;, webserver.options.bindIP, webserver.options.port], &#x27;debug&#x27;)
+    api.log(`webSockets bound to ${webserver.options.bindIP}: ${webserver.options.port}`, &#x27;debug&#x27;)
     server.active = true
 
     server.writeClientJS()
@@ -3814,7 +5116,7 @@ this.api.projectRoot = process.cwd()
     let ahClientSource = server.compileActionheroClientJS()
     ahClientSource =
       &#x27;;;;\r\n&#x27; +
-      &#x27;(function(exports){ \r\n&#x27; ...</pre></li>
+      &#x27;(function(exports){ \r\n&#x27; + ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   initialized: false,
   shuttingDown: false
